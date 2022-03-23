@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Manager\TransportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
+Route::middleware(['auth'])->group(function(){
+    Route::view('/dashboard', 'dashboard')->name('dashboard');
+    Route::get('/data-transport', [TransportController::class, 'index']);
+});
 
 require __DIR__.'/auth.php';
