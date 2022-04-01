@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Transport;
 
 class TransportController extends Controller
 {
@@ -14,7 +15,9 @@ class TransportController extends Controller
      */
     public function index()
     {
-        return view('manager.transport.index');
+        $transports=Transport::all();
+
+        return view('manager.transport.index', compact('transports'));
     }
 
     /**
@@ -24,7 +27,7 @@ class TransportController extends Controller
      */
     public function create()
     {
-        //
+        return view('manager.transport.create');
     }
 
     /**
@@ -35,7 +38,11 @@ class TransportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $attr = $request->all();
+        
+        Transport::create($attr);
+
+        return back();
     }
 
     /**
@@ -57,7 +64,8 @@ class TransportController extends Controller
      */
     public function edit($id)
     {
-        //
+        $transportsedit=Transport::find($id);
+        return view('manager.transport.edit', compact('transportsedit'));
     }
 
     /**
@@ -67,9 +75,13 @@ class TransportController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Transport $transport)
     {
-        //
+        $attr = $request->all();
+        $transport->update($attr);
+
+        return back();
+        
     }
 
     /**
@@ -80,6 +92,10 @@ class TransportController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $transportsdelete=Transport::find($id);
+        $transportsdelete->delete();
+        
+
+        return back();
     }
 }

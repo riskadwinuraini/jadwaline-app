@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('car_schedules', function (Blueprint $table) {
-            $table->integer('car_id');            
-            $table->time('start_time');            
-            $table->time('end_time');
-            $table->string('day');
+        Schema::create('travel_routes', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('route_start');
+            $table->string('route_end');
+            $table->unsignedInteger('car_id');
+            $table->foreign('car_id')->references('id')->on('transports');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('car_schedules');
+        Schema::dropIfExists('travel_routes');
     }
 };

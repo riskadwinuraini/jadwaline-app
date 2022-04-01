@@ -18,7 +18,9 @@ return new class extends Migration
             $table->string('code_transaction');
             $table->string('payment_method');
             $table->string('total');
-            $table->integer('user_id');
+            $table->unsignedInteger('user_id');
+ 
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

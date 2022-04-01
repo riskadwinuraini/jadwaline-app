@@ -13,15 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('reviews', function (Blueprint $table) {
-            $table->increments('id');
-
-            $table->unsignedInteger('user_id');
- 
-            $table->foreign('user_id')->references('id')->on('users');
-
-            $table->double('rate');
-            $table->text('text');
+        Schema::create('car_schedules', function (Blueprint $table) {
+            $table->increments('car_id');            
+            $table->time('start_time');            
+            $table->time('end_time');
+            $table->string('day');
+            $table->string('code');
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reviews');
+        Schema::dropIfExists('car_schedules');
     }
 };

@@ -23,7 +23,7 @@ Route::get('/', function () {
 // })->middleware(['auth'])->name('dashboard');
 Route::middleware(['auth'])->group(function(){
     Route::view('/dashboard', 'dashboard')->name('dashboard');
-    Route::get('/data-transport', [TransportController::class, 'index']);
+    Route::resource('/transport', TransportController::class);
 });
 
 require __DIR__.'/auth.php';
