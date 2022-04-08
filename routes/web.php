@@ -24,6 +24,7 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function(){
     Route::view('/dashboard', 'dashboard')->name('dashboard');
     Route::resource('/transport', TransportController::class);
+    Route::view('/profile','profile');
 });
 
 require __DIR__.'/auth.php';
