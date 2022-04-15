@@ -69,13 +69,6 @@
                                                 <div id="verview-shart"></div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-4 coin-distribution">
-                                        <div class="card h-full">
-                                            <div class="card-body">
-                                                <h4 class="header-title mb-0">Coin Distribution</h4>
-                                                <div id="coin_distribution"></div>
-                                            </div>
                                         </div>
                                     </div>
                             </div>
