@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Manager\TransportController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +25,8 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function(){
     Route::view('/dashboard', 'dashboard')->name('dashboard');
     Route::resource('/transport', TransportController::class);
-    Route::view('/profile','profile');
+    Route::get('/profile',[UserController::class,'profile']);
+    Route::put('update-Profile/{users:id}',[UserController::class,'update'])->name('update.profile');
 });
 
 require __DIR__.'/auth.php';

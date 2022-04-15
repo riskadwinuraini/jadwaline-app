@@ -1,7 +1,8 @@
 <div class="sidebar-menu">
             <div class="sidebar-header">
                 <div class="logo">
-                    <a href="index.html"><img src="/assets/images/icon/logo.png" alt="logo"></a>
+                    <!-- <a href="index.html"><img src="/assets/images/icon/logo.png" alt="logo"></a> -->
+                    <h3 style="color:#fff">Tracking-Line</h3>
                 </div>
             </div>
             <div class="main-menu">

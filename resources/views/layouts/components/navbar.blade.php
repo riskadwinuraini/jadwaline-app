@@ -10,6 +10,9 @@
                     </div>
                     <!-- profile info & task notification -->
                     <div class="col-md-6 col-sm-4 clearfix">
+                    <a href="/profile" class="pull-right">{{Auth()->user()->name}}</a>
+                    </div>
+                    <!-- <div class="col-md-6 col-sm-4 clearfix">
                         <ul class="notification-area pull-right">
                             <li id="full-view"><i class="ti-fullscreen"></i></li>
                             <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
@@ -154,7 +157,7 @@
                                 <i class="ti-settings"></i>
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 

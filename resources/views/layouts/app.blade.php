@@ -76,6 +76,8 @@
     <!-- others plugins -->
     <script src="/assets/js/plugins.js"></script>
     <script src="/assets/js/scripts.js"></script>
+
+    @stack('script')
 </body>
 
 </html>
