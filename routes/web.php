@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Manager\{TransportController, ReviewController};
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\UserController;
 
 
@@ -17,7 +18,7 @@ Route::middleware(['auth'])->group(function(){
     Route::delete('/review/{review:id}', [ReviewController::class, 'destroy'])->name('review.destroy');
     Route::get('/profile',[UserController::class,'profile']);
     Route::put('update-Profile/{users:id}',[UserController::class,'update'])->name('update.profile');
-    // Route::resources('/data-master', );
+    Route::get('/akun', [AccountController::class, 'index'])->name('account.index');
 });
 
 require __DIR__.'/auth.php';

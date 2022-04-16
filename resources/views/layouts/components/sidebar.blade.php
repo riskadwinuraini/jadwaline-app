@@ -13,6 +13,7 @@
                             <li><a href="{{ route('transport.index')}}"><i class="ti-map-alt"></i> <span>Data Angkutan</span></a></li>
                             <li><a href="{{ route('review.index')}}"><i class="ti-receipt"></i> <span>Review</span></a></li>
                             <li><a href="invoice.html"><i class="ti-receipt"></i> <span>History</span></a></li>
+                            <li><a href="{{ route('account.index')}}"><i class="ti-receipt"></i> <span>Akun</span></a></li>
                             <li>
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                                     Logout
