@@ -17,6 +17,7 @@ Route::middleware(['auth'])->group(function(){
     Route::delete('/review/{review:id}', [ReviewController::class, 'destroy'])->name('review.destroy');
     Route::get('/profile',[UserController::class,'profile']);
     Route::put('update-Profile/{users:id}',[UserController::class,'update'])->name('update.profile');
+    // Route::resources('/data-master', );
 });
 
 require __DIR__.'/auth.php';

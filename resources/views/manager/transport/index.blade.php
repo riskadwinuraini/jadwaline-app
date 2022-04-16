@@ -6,7 +6,8 @@
         <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Progress Table</h4>
+                                <a href="{{route('transport.create')}}" class="btn btn-primary">Tambah</a>
+                                {{-- <h4 class="header-title">Progress Table</h4> --}}
                                 <div class="single-table">
                                     <div class="table-responsive">
                                         <table class="table table-hover progress-table text-center">
