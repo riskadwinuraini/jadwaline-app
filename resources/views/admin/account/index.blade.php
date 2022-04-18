@@ -26,8 +26,8 @@
                                                     <td>{{$account->name}}</td>
                                                     <td>{{$account->email}}</td>
                                                     <td>
-                                                        <span class="status-p bg-{{ ($account->sim === '') ? 'primary' : 'danger'}}">
-                                                            {{ ($account->sim === '') ? 'approved' : 'not approved'}}
+                                                        <span class="status-p bg-{{ ($account->sim != null) ? 'primary' : 'danger'}}">
+                                                            {{ ($account->sim != null) ? 'approved' : 'not approved'}}
                                                         </span>
                                                     </td>
                                                     <td>

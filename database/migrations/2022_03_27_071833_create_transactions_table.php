@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('total');
             $table->unsignedInteger('user_id');
  
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade'); 
             $table->timestamps();
         });
     }

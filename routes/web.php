@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Manager\{TransportController, ReviewController};
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DashboardController;
 
 
 Route::get('/', function () {
@@ -12,7 +13,7 @@ Route::get('/', function () {
 
 
 Route::middleware(['auth'])->group(function(){
-    Route::view('/dashboard', 'dashboard')->name('dashboard');
+    Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
     Route::resource('/transport', TransportController::class);
     Route::get('/review', [ReviewController::class, 'index'])->name('review.index');
     Route::delete('/review/{review:id}', [ReviewController::class, 'destroy'])->name('review.destroy');
