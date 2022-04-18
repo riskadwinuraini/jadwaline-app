@@ -10,6 +10,7 @@ class DashboardController extends Controller
     public function index()
     {
         $sum = Transaction::sum('total');
-        return view('dashboard',compact('sum'));
+        $alltransaction = Transaction::all();
+        return view('dashboard',compact('sum',"alltransaction"));
     }
 }

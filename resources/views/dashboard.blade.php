@@ -56,17 +56,34 @@
                     <div class="col-lg-12 mt-4">       
                             <!-- overview area start -->
                             <div class="row">
-                                    <div class="col-xl-9 col-lg-8">
+                                    <div class="col-xl-12 col-lg-12">
                                         <div class="card">
                                             <div class="card-body">
-                                                <div class="d-flex justify-content-between align-items-center">
-                                                    <h4 class="header-title mb-0">Overview</h4>
-                                                    <select class="custome-select border-0 pr-3">
-                                                        <option selected>Last 24 Hours</option>
-                                                        <option value="0">01 July 2018</option>
-                                                    </select>
+                                                <h4 class="header-title">History Transaction</h4>
+                                                <div class="single-table">
+                                                    <div class="table-responsive">
+                                                        <table class="table text-center">
+                                                            <thead class="text-uppercase bg-primary">
+                                                                <tr class="text-white">
+                                                                    <th scope="col">No.</th>
+                                                                    <th scope="col">code_transaction</th>
+                                                                    <th scope="col">payment_method</th>
+                                                                    <th scope="col">total</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                @foreach ($alltransaction as $Tsn)
+                                                                    <tr>
+                                                                        <td>{{$loop->iteration}}</td>
+                                                                        <td>{{$Tsn->code_transaction}}</td>
+                                                                        <td>{{$Tsn->payment_method}}</td>
+                                                                        <td>{{$Tsn->total}}</td>
+                                                                    </tr>
+                                                                    @endforeach
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
-                                                <div id="verview-shart"></div>
                                             </div>
                                         </div>
                                         </div>
