@@ -7,7 +7,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <a href="{{route('transport.create')}}" class="btn btn-primary">Tambah</a>
-                                {{-- <h4 class="header-title">Progress Table</h4> --}}
+                                 <h4 class="header-title">Progress Table</h4>
                                 <div class="single-table">
                                     <div class="table-responsive">
                                         <table class="table table-hover progress-table text-center">
