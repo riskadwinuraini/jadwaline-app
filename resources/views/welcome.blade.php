@@ -93,7 +93,7 @@
                 </span>
                 <div class="text">
                   <h4>User Friendly</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing typesting industry text.</p>
+                  <p>TrackingLine memiliki tampilan yang nyaman dan user friendly baik di dekstop maupun mobile device sehingga mudah untuk digunakan</p>
                 </div>
               </div>
               <div class="box-item left">
@@ -101,17 +101,8 @@
                   <i class="lni-dashboard"></i>
                 </span>
                 <div class="text">
-                  <h4>Super Fast Speed</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing typesting industry text.</p>
-                </div>
-              </div>
-              <div class="box-item left">
-                <span class="icon">
-                  <i class="lni-headphone-alt"></i>
-                </span>
-                <div class="text">
-                  <h4>24/7 Support</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing typesting industry text.</p>
+                  <h4>Professional</h4>
+                  <p>TrackingLine dikerjakan oleh orang-orang yang Professional demi memenuhi kebutuhan dan kepuasaan pelanggan.</p>
                 </div>
               </div>
             </div>
@@ -128,8 +119,8 @@
                   <i class="lni-shield"></i>
                 </span>
                 <div class="text">
-                  <h4>Secure</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing typesting industry text.</p>
+                  <h4>Terpercaya</h4>
+                  <p>TrackingLine dilengkapi dengan berbagai macam validasi untuk mencegah pengguna melakukan kesalahan dalam proses penginputan data</p>
                 </div>
               </div>
               <div class="box-item right">
@@ -137,17 +128,8 @@
                   <i class="lni-star-filled"></i>
                 </span>
                 <div class="text">
-                  <h4>Awesome Rating</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing typesting industry text.</p>
-                </div>
-              </div>
-              <div class="box-item right">
-                <span class="icon">
-                  <i class="lni-cup"></i>
-                </span>
-                <div class="text">
-                  <h4>Award Winning</h4>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing typesting industry text.</p>
+                  <h4>Pelayanan Full 24 jam</h4>
+                  <p>TrackingLine memiliki kualitas yang terjamin karena dibuat dengan melalui proses yang maksimal sehingga meminimalisir terjadinya bug</p>
                 </div>
               </div>
             </div>
@@ -160,7 +142,7 @@
     <section id="testimonial" class="section">
       <div class="container">
         <div class="section-header">   
-          <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Reviews</p>       
+          <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Testimonial</p>       
           <h2 class="section-title">Clients Who Loved Us</h2>
         </div>
         <div class="row justify-content-center">
