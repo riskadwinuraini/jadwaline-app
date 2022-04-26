@@ -9,8 +9,15 @@
                 <div class="menu-inner">
                     <nav>
                         <ul class="metismenu" id="menu">
+                            @can('isAdmin')
                             <li><a href="{{ route('dashboard')}}"><i class="ti-dashboard"></i> <span>Dashboard</span></a></li>
                             <li><a href="{{ route('transport.index')}}"><i class="ti-map-alt"></i> <span>Data Angkutan</span></a></li>
+                            <li>
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                                    Logout
+                                </a> 
+                            </li>
+                            @elsecan('isManager')
                             <li><a href="{{ route('review.index')}}"><i class="ti-receipt"></i> <span>Review</span></a></li>
                             <li><a href="{{ route('account.index')}}"><i class="ti-receipt"></i> <span>Akun</span></a></li>
                             <li>
@@ -18,7 +25,7 @@
                                     Logout
                                 </a> 
                             </li>
-
+                            @endcan
                             <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
