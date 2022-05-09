@@ -7,6 +7,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\Facades\Route;
+use Psy\CodeCleaner\NamespaceAwarePass;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -17,7 +18,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/dashboard';
+    public const HOME = '/login';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -35,6 +36,19 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+
+            Route::middleware('web')
+                ->prefix('admin-area')
+                ->name('admin.')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/admin/web.php'));
+
+            Route::middleware('web')
+                ->prefix('member-area')
+                ->name('manager.')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/manager/web.php'));
+                
         });
     }
 
