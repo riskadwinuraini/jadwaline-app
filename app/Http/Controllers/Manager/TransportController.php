@@ -15,8 +15,8 @@ class TransportController extends Controller
      */
     public function index()
     {
-        $transports=Transport::all();
-
+        $transports = Transport::all();
+ 
         return view('manager.transport.index', compact('transports'));
     }
 
@@ -41,7 +41,6 @@ class TransportController extends Controller
         $attr = $request->all();
         
         Transport::create($attr);
-
         return back();
     }
 
