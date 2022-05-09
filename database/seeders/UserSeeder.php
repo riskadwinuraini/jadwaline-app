@@ -2,9 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
 
 class UserSeeder extends Seeder
 {
@@ -15,24 +17,28 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
+        $role = $this->makeRoles();
+        $admin = User::create([
+            'name' => 'Administrator',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('admin123')
+        ]);
 
-        $users = [
-            [
-                'name' =>'Nelly Maulia',
-                'email' =>'nelly123@gmail.com',
-                'password' => bcrypt('nelly123'),
-                'sim' => 'sim A',
-                'role' => 'admin'
-            ],
-            [
-                'name' =>'Eggi Permana',
-                'email' =>'eggi_p098@gmail.com',
-                'password' => bcrypt('eggi098'),
-                'sim' => 'sim A',
-                'role' => 'manager'
-            ]
+        $user = User::create([
+            'name' => 'User',
+            'email' => 'user@gmail.com' ,
+            'password'=> Hash::make('user123')
+        ]);
+
+        $admin->assignRole($role->admin);
+        $user->assignRole($role->user);
+    }
+
+    private function makeRoles(): object
+    {
+        return (object) [
+            'admin'=> Role::create( attributes:['name' => 'admin']),
+            'user'=> Role::create( attributes:['name' => 'user']),
         ];
-
-        DB::table('users')->insert($users);
     }
 }

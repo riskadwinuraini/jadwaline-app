@@ -7,12 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
-Route::middleware(['auth'])->group(function(){
+Route::middleware(['auth','role:user'])->group(function(){
     Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
     Route::resource('/transport', TransportController::class);
     Route::get('/review', [ReviewController::class, 'index'])->name('review.index');
