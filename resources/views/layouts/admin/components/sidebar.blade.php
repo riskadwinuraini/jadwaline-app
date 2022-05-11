@@ -1,7 +1,8 @@
 <div id="sidebar" class='active'>
     <div class="sidebar-wrapper active">
         <div class="sidebar-header">
-            <img src="/admin/images/logo.svg" alt="" srcset="">
+            <img src="/admin/images/tl.jpg"
+            class="rounded-circle" width="200" height="450" alt="Circle image">
         </div>
         <div class="sidebar-menu">
             <ul class="menu">
@@ -17,33 +18,32 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-
-                <li class='sidebar-title'>Extra UI</li>
-
-
                 <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i data-feather="user" width="20"></i>
-                        <span>Widgets</span>
+                        <span>Kelola Akun</span>
                     </a>
 
                     <ul class="submenu ">
 
                         <li>
-                            <a href="ui-chatbox.html">Chatbox</a>
+                            <a href="ui-chatbox.html">Manager</a>
                         </li>
 
                         <li>
-                            <a href="ui-pricing.html">Pricing</a>
+                            <a href="ui-pricing.html">Sopir</a>
                         </li>
-
-                        <li>
-                            <a href="ui-todolist.html">To-do List</a>
-                        </li>
-
                     </ul>
-
                 </li>
+                <li class="sidebar-item active ">
+                    <a href="index.html" class='sidebar-link'>
+                        <i data-feather="bar-chart" width="20"></i>
+                        <span>Statistika Pendapatan</span>
+                    </a>
+                </li>
+              
+
+
                 
 
             </ul>
