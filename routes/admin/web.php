@@ -1,14 +1,15 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\Manager\{TransportController, ReviewController};
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Admin\DashboardController;
+use Illuminate\Support\Facades\Route;
 
 
-Route::middleware(['auth','role:admin'])->group(function(){
-    Route::get('/dashboard',[DashboardController::class, 'index'])->name('dashboard');
+Route::middleware(['auth', 'role:admin'])->group(function(){
+    Route::get('/',DashboardController::class)->name('dashboard');
     Route::resource('/transport', TransportController::class);
     Route::get('/review', [ReviewController::class, 'index'])->name('review.index');
 

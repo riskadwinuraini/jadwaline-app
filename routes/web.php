@@ -23,4 +23,4 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/akun', [AccountController::class, 'index'])->name('account.index');
 });
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';

@@ -14,11 +14,11 @@
                             <li class="{{ request()->routeIs('review*') ? 'active' : '' }}"><a href="{{ route('review.index')}}"><i class="ti-receipt"></i> <span>Review</span></a></li>
                             <li class="{{ request()->routeIs('account*') ? 'active' : '' }}"><a href="{{ route('account.index')}}"><i class="ti-receipt"></i> <span>Akun</span></a></li>
                             <li>
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                                <a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                                     Logout
-                                </a> 
+                                </a>
                             </li>
-                            <form id="frm-logout" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            <form id="frm-logout" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
                                 @csrf
                             </form>
                         </ul>

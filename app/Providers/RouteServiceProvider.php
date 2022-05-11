@@ -44,11 +44,11 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/admin/web.php'));
 
             Route::middleware('web')
-                ->prefix('member-area')
+                ->prefix('manager-area')
                 ->name('manager.')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/manager/web.php'));
-                
+
         });
     }
 

@@ -17,19 +17,19 @@
     <link rel="stylesheet" href="/landing/css/animate.css">
     <link rel="stylesheet" href="/landing/css/magnific-popup.css">
     <link rel="stylesheet" href="/landing/css/nivo-lightbox.css">
-    <link rel="stylesheet" href="/landing/css/main.css">    
+    <link rel="stylesheet" href="/landing/css/main.css">
     <link rel="stylesheet" href="/landing/css/responsive.css">
 
   </head>
-  
+
   <body>
 
     <!-- Header Section Start -->
-    <header id="home" class="hero-area-2">    
+    <header id="home" class="hero-area-2">
       <div class="overlay"></div>
       <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
         <div class="container">
-          <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt=""></a>  
+          <a href="index.html" class="navbar-brand"><img src="img/logo.png" alt=""></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <i class="lni-menu"></i>
           </button>
@@ -40,21 +40,21 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="#app-features">Features</a>
-              </li>                            
+              </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="#testimonial">Testimonial</a>
-              </li>  
+              </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="#download">Download</a>
-              </li> 
+              </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="#map-area">Contact</a>
-              </li> 
+              </li>
             </ul>
           </div>
         </div>
-      </nav>  
-      <div class="container">      
+      </nav>
+      <div class="container">
         <div class="row space-100">
           <div class="col-lg-7 col-md-12 col-xs-12">
             <div class="contents">
@@ -63,25 +63,25 @@
                 karena itulah, TrackingLine bisa dijadikan solusi perjalanan kehidupan.
               </p>
               <div class="header-button">
-                <a href="{{ route('login')}}" class="btn btn-border-filled">Sign in</a>
+                <a href="{{ route('manager.login')}}" class="btn btn-border-filled">Sign in</a>
               </div>
             </div>
           </div>
           <div class="col-lg-5 col-md-12 col-xs-12">
             <div class="intro-img">
               <img src="img/intro-mobile.png" alt="">
-            </div>            
+            </div>
           </div>
-        </div> 
-      </div>             
+        </div>
+      </div>
     </header>
-    <!-- Header Section End --> 
+    <!-- Header Section End -->
 
     <!-- features Section Start -->
     <div id="app-features" class="section">
       <div class="container">
-        <div class="section-header">   
-          <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">features</p>       
+        <div class="section-header">
+          <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">features</p>
           <h2 class="section-title wow fadeIn" data-wow-delay="0.2s">Amazing Features</h2>
         </div>
         <div class="row">
@@ -141,8 +141,8 @@
     <!-- Testimonial Section Start -->
     <section id="testimonial" class="section">
       <div class="container">
-        <div class="section-header">   
-          <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Testimonial</p>       
+        <div class="section-header">
+          <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Testimonial</p>
           <h2 class="section-title">Clients Who Loved Us</h2>
         </div>
         <div class="row justify-content-center">
@@ -233,7 +233,7 @@
         </div>
       </div>
     </section>
-    <!-- Testimonial Section End -->  
+    <!-- Testimonial Section End -->
 
     <!-- Clients Section -->
     <div id="clients" class="section">
@@ -259,12 +259,12 @@
         </div>
       </div>
     </div>
-    <!-- Client Section End --> 
+    <!-- Client Section End -->
     <!-- download Section Start -->
     <section id="download">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-xs-12">            
+          <div class="col-lg-6 col-md-6 col-xs-12">
             <div class="download-thumb wow fadeInLeft" data-wow-delay="0.2s">
               <img class="img-fluid" src="img/mac.png" alt="">
             </div>
@@ -306,15 +306,15 @@
     <!-- Map Section End -->
 
     <!-- Contact Section Start -->
-    <section id="contact">      
+    <section id="contact">
       <div class="contact-form">
         <div class="container">
-          <div class="row justify-content-center"> 
+          <div class="row justify-content-center">
             <div class="offset-top">
               <div class="col-lg-12 col-md-12 col-xs-12">
                 <div class="contact-block wow fadeInUp" data-wow-delay="0.2s">
-                  <div class="section-header">   
-                    <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Contact</p>       
+                  <div class="section-header">
+                    <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Contact</p>
                     <h2 class="section-title">Love to Hear From You</h2>
                   </div>
                   <form id="contactForm">
@@ -323,13 +323,13 @@
                         <div class="form-group">
                           <input type="text" class="form-control" id="name" name="name" placeholder="Name" required data-error="Please enter your name">
                           <div class="help-block with-errors"></div>
-                        </div>                                 
+                        </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <input type="text" placeholder="Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
                           <div class="help-block with-errors"></div>
-                        </div> 
+                        </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
@@ -338,24 +338,24 @@
                         </div>
                       </div>
                       <div class="col-md-12">
-                        <div class="form-group"> 
+                        <div class="form-group">
                           <textarea class="form-control" id="message" placeholder="Message" rows="7" data-error="Write your message" required></textarea>
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="submit-button">
                           <button class="btn btn-common btn-effect" id="submit" type="submit">Submit</button>
-                          <div id="msgSubmit" class="h3 hidden"></div> 
-                          <div class="clearfix"></div> 
+                          <div id="msgSubmit" class="h3 hidden"></div>
+                          <div class="clearfix"></div>
                         </div>
                       </div>
-                    </div>            
+                    </div>
                   </form>
                 </div>
               </div>
-            </div> 
+            </div>
           </div>
         </div>
-      </div>        
+      </div>
     </section>
     <!-- Contact Section End -->
 
@@ -413,14 +413,14 @@
               <div class="col-md-12">
                 <div class="site-info float-left">
                   <p>&copy; 2022 - Designed by <a href="http://uideck.com" rel="nofollow">Kel.III</a></p>
-                </div>              
-                <div class="float-right">  
+                </div>
+                <div class="float-right">
                   <ul class="footer-social">
                     <li><a class="facebook" href="#"><i class="lni-facebook-filled"></i></a></li>
                     <li><a class="twitter" href="#"><i class="lni-twitter-filled"></i></a></li>
                     <li><a class="linkedin" href="#"><i class="lni-linkedin-fill"></i></a></li>
                     <li><a class="google-plus" href="#"><i class="lni-google-plus"></i></a></li>
-                  </ul> 
+                  </ul>
                 </div>
               </div>
             </div>
@@ -429,14 +429,14 @@
       <!-- Copyright End -->
       </section>
       <!-- Footer area End -->
-      
+
     </footer>
-    <!-- Footer Section End --> 
+    <!-- Footer Section End -->
 
     <!-- Go To Top Link -->
     <a href="#" class="back-to-top">
       <i class="lni-chevron-up"></i>
-    </a> 
+    </a>
 
     <!-- Preloader -->
     <div id="preloader">
@@ -448,19 +448,19 @@
     <script src="/landing/js/jquery-min.js"></script>
     <script src="/landing/js/popper.min.js"></script>
     <script src="/landing/js/bootstrap.min.js"></script>
-    <script src="/landing/js/owl.carousel.js"></script> 
-    <script src="/landing/js/jquery.mixitup.js"></script>       
-    <script src="/landing/js/jquery.nav.js"></script>    
-    <script src="/landing/js/scrolling-nav.js"></script>    
-    <script src="/landing/js/jquery.easing.min.js"></script>     
-    <script src="/landing/js/wow.js"></script>   
-    <script src="/landing/js/jquery.counterup.min.js"></script>     
-    <script src="/landing/js/nivo-lightbox.js"></script>     
-    <script src="/landing/js/jquery.magnific-popup.min.js"></script>     
-    <script src="/landing/js/waypoints.min.js"></script>      
+    <script src="/landing/js/owl.carousel.js"></script>
+    <script src="/landing/js/jquery.mixitup.js"></script>
+    <script src="/landing/js/jquery.nav.js"></script>
+    <script src="/landing/js/scrolling-nav.js"></script>
+    <script src="/landing/js/jquery.easing.min.js"></script>
+    <script src="/landing/js/wow.js"></script>
+    <script src="/landing/js/jquery.counterup.min.js"></script>
+    <script src="/landing/js/nivo-lightbox.js"></script>
+    <script src="/landing/js/jquery.magnific-popup.min.js"></script>
+    <script src="/landing/js/waypoints.min.js"></script>
     <script src="/landing/js/form-validator.min.js"></script>
-    <script src="/landing/js/contact-form-script.js"></script>   
+    <script src="/landing/js/contact-form-script.js"></script>
     <script src="/landing/js/main.js"></script>
-    
+
   </body>
 </html>
