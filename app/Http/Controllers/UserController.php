@@ -18,7 +18,7 @@ class UserController extends Controller
 
     public function profile()
     {
-        return view('profile');
+        return view('manager.profile');
     }
 
     public function update(Request $request)

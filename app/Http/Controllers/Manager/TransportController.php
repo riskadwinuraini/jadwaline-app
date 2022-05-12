@@ -16,7 +16,7 @@ class TransportController extends Controller
     public function index()
     {
         $transports = Transport::all();
- 
+        
         return view('manager.transport.index', compact('transports'));
     }
 

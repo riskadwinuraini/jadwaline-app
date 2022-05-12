@@ -1,15 +1,13 @@
-@extends('layouts.app')
+@extends('layouts.manager.app')
 
 @section('content')
-<div class="main-content">
-            <!-- page title area end -->
-    <div class="main-content-inner">
+
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
                         <div class="card-title">Edit Profile</div>
-                        <form action="{{ route('update.profile', Auth::user()->id)}}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('manager.update.profile', Auth::user()->id)}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="mb-3">
@@ -34,8 +32,7 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+
 @endsection
 @push('script')
 <script>
