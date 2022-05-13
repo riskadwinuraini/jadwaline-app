@@ -1,12 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.admin.app')
 
 @section('content')
-    <div class="main-content-inner">
         <div class="row">
             <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="header-title">Akun Sopir dan Manager</h4>
+                            <h4 class="header-title">Akun supir</h4>
                             <div class="single-table">
                                 <div class="table-responsive">
                                     <table class="table table-hover progress-table text-center">
@@ -20,17 +19,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($accounts as $account)
+                                            @foreach($accountSupir as $supir)
                                                 <tr>
                                                     <td>{{$loop->iteration}}</td>
-                                                    <td>{{$account->name}}</td>
-                                                    <td>{{$account->email}}</td>
+                                                    <td>{{$supir->name}}</td>
+                                                    <td>{{$supir->email}}</td>
                                                     <td>
-                                                        <span class="status-p bg-{{ ($account->sim != null) ? 'primary' : 'danger'}}">
-                                                            {{ ($account->sim != null) ? 'approved' : 'not approved'}}
+                                                        <span class="badge bg-{{ ($supir->sim != null) ? 'success' : 'danger'}}">
+                                                            {{ ($supir->sim != null) ? 'approved' : 'not approved'}}
                                                         </span>
                                                     </td>
                                                     <td>
+                                                        <a href="#" class="btn btn-info btn-sm">Kelola akun</a>
                                                         <a href="#" class="btn btn-danger btn-sm">Delete</a>
                                                     </td>
                                                 </tr>
@@ -44,5 +44,4 @@
                 </div>
             </div>
         </div>
-    </div>
 @endsection

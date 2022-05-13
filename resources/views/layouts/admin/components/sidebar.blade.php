@@ -13,7 +13,7 @@
 
 
                 <li class="sidebar-item active ">
-                    <a href="index.html" class='sidebar-link'>
+                    <a href="{{ route('admin.dashboard')}}" class='sidebar-link'>
                         <i data-feather="home" width="20"></i>
                         <span>Dashboard</span>
                     </a>
@@ -27,20 +27,20 @@
                     <ul class="submenu ">
 
                         <li>
-                            <a href="ui-chatbox.html">Manager</a>
+                            <a href="{{ route('admin.account.manage.manager')}}">Manager</a>
                         </li>
 
                         <li>
-                            <a href="ui-pricing.html">Sopir</a>
+                            <a href="{{ route('admin.account.manage.driver')}}">Supir</a>
                         </li>
                     </ul>
                 </li>
-                <li class="sidebar-item active ">
+                {{-- <li class="sidebar-item ">
                     <a href="index.html" class='sidebar-link'>
                         <i data-feather="bar-chart" width="20"></i>
                         <span>Statistika Pendapatan</span>
                     </a>
-                </li>
+                </li> --}}
               
 
 

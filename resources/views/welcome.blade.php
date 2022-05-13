@@ -63,7 +63,7 @@
                 karena itulah, TrackingLine bisa dijadikan solusi perjalanan kehidupan.
               </p>
               <div class="header-button">
-                <a href="{{ route('manager.login')}}" class="btn btn-border-filled">Sign in</a>
+                <a href="{{ route('admin.login')}}" class="btn btn-border-filled">Sign in</a>
               </div>
             </div>
           </div>

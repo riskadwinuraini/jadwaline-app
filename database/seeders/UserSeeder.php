@@ -24,21 +24,29 @@ class UserSeeder extends Seeder
             'password' => Hash::make('admin123')
         ]);
 
-        $user = User::create([
-            'name' => 'User',
-            'email' => 'user@gmail.com' ,
-            'password'=> Hash::make('user123')
+        $manager = User::create([
+            'name' => 'manager',
+            'email' => 'manager@gmail.com' ,
+            'password'=> Hash::make('manager123')
+        ]);
+
+        $supir = User::create([
+            'name' => 'supir',
+            'email' => 'supir@gmail.com' ,
+            'password'=> Hash::make('supir123')
         ]);
 
         $admin->assignRole($role->admin);
-        $user->assignRole($role->user);
+        $manager->assignRole($role->manager);
+        $supir->assignRole($role->supir);
     }
 
     private function makeRoles(): object
     {
         return (object) [
             'admin'=> Role::create( attributes:['name' => 'admin']),
-            'user'=> Role::create( attributes:['name' => 'user']),
+            'manager'=> Role::create( attributes:['name' => 'manager']),
+            'supir'=> Role::create( attributes:['name' => 'supir']),
         ];
     }
 }
