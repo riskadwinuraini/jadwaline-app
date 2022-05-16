@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.manager.app')
 
 @section('content')
     <div class="main-content-inner">
@@ -6,7 +6,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('transport.update', $transportsedit->id) }}" autocomplete="off" method="POST">
+                        <form action="{{ route('manager.transport.update', $transportsedit->id) }}" autocomplete="off" method="POST">
                             @csrf
                             @method('PUT')
                             <div class="mb-3">

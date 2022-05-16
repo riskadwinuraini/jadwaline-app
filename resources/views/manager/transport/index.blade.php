@@ -1,50 +1,56 @@
-@extends('layouts.app')
+@extends('layouts.manager.app')
 
 @section('content')
-    <div class="main-content-inner">
-        <div class="row">
-        <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <a href="{{route('transport.create')}}" class="btn btn-primary">Tambah</a>
-                                {{-- <h4 class="header-title">Progress Table</h4> --}}
-                                <div class="single-table">
-                                    <div class="table-responsive">
-                                        <table class="table table-hover progress-table text-center">
-                                            <thead class="text-uppercase">
-                                                <tr>
-                                                    <th scope="col">No</th>
-                                                    <th scope="col">Nama</th>
-                                                    <th scope="col">Warna Angkot</th>
-                                                    <th scope="col">Plat Nomor</th>
-                                                    <th scope="col" colspan="2">action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            @foreach ($transports as $transport)
-                                                <tr>
-                                                    <td>{{ $transport->id }}</td>
-                                                    <td>{{ $transport->name }}</td>
-                                                    <td>{{ $transport->car_color}}</td>
-                                                    <td>{{ $transport->number_plate }}</td>
-
-                                                    <td>
-                                                        <a href="{{ route('transport.edit', $transport->id) }}" class="btn btn-success">edit</a>   
-                                                        <form action="{{ route('transport.destroy', $transport->id) }}" method="post">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                            <button class="btn btn-danger">hapus</button>
-                                                        </form>
-                                                    </td>
-                                                </tr>
-                                            @endforeach
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        </div>
+    <div class="row">
+        <div class="col-lg-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">
+                    <a href="{{ route('manager.transport.create')}}" class="btn btn-primary"> Tambah data</a>
+                </h4>
+                <div class="table-responsive">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>
+                          Name
+                        </th>
+                        <th>
+                            Car Colors
+                        </th>
+                        <th>
+                            Number Plate
+                        </th>
+                        {{-- <th>
+                            Car Code
+                        </th> --}}
+                        <th>
+                            User
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($transports as $item)
+                            <tr>
+                                <td>{{ $item->name}}</td>
+                                <td>{{ $item->car_color}}</td>
+                                <td>{{ $item->number_plate}}</td>
+                                {{-- <td>{{ $item->}}</td> --}}
+                                <td>{{ $item->user->name}}</td>
+                                <td>
+                                    <a href="{{ route('manager.transport.edit', $item->id)}}">Edit</a>
+                                    <a href="{{ route('manager.transport.destroy', $item->id)}}">Hapus</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
 @endsection

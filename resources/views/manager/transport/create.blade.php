@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.manager.app')
 
 @section('content')
     <div class="main-content-inner">
@@ -6,7 +6,7 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
-                        <form action="{{ route('transport.store') }}" autocomplete="off" method="POST">
+                        <form action="{{ route('manager.transport.store') }}" autocomplete="off" method="POST">
                             @csrf
                             <div class="mb-3">
                                 <label for="" class="form-label">Name</label>

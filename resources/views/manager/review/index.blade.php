@@ -6,7 +6,7 @@
         <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Reviews DataTablep</h4>
+                                <h4 class="header-title">Reviews DataTable</h4>
                                 <div class="single-table">
                                     <div class="table-responsive">
                                         <table class="table table-hover progress-table text-center">
