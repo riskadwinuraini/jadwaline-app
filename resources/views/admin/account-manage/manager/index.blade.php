@@ -6,7 +6,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="header-title">Akun Manager</h4>
-                            <a href="#" class="btn btn-primary btn-sm">Tambah Akun manager</a>
+                            <a href="{{route('admin.account.manage.manager.create')}}" class="btn btn-primary btn-sm">Tambah Akun manager</a>
                             <div class="single-table">
                                 <div class="table-responsive">
                                     <table class="table table-hover progress-table text-center">
@@ -32,7 +32,8 @@
                                                     </td>
                                                     <td>
                                                         <a href="#" class="btn btn-info btn-sm">Kelola akun</a>
-                                                        <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                                        <a href="" onclick="return confirm('Apakah Anda Yakin Menghapus Data?');" class="btn btn-danger btn-sm">
+                                                        <i data-feather="trash-2" width="20"></i></a>
                                                     </td>
                                                 </tr>
                                             @endforeach

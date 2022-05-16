@@ -27,12 +27,12 @@
                     <ul class="submenu ">
 
                         <li>
-                            <a href="{{ route('admin.account.manage.manager')}}">Manager</a>
+                            <a href="{{ route('admin.account.manage.manager.index')}}">Manager</a>
                         </li>
 
-                        <li>
+                        <!-- <li>
                             <a href="{{ route('admin.account.manage.driver')}}">Supir</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </li>
                 {{-- <li class="sidebar-item ">

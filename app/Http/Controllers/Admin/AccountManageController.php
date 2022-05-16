@@ -5,10 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AccountManageController extends Controller
 {
-    public function getManager()
+    public function index()
     {
 
         /**
@@ -22,18 +23,34 @@ class AccountManageController extends Controller
         return view('admin.account-manage.manager.index', compact('accountManager'));
     }
 
-    public function getDriver()
+    public function create()
+    {
+        return view('admin.account-manage.manager.create');
+    }
+
+    public function store(Request $request)
     {
 
-         /**
-         * 
-         * TODO: fungsi untuk menampilkan data user berupa role supir
-         * 
-         */
+        $attr = $request->all();
+        $attr['password'] = Hash::make($request->input('password'));
+
+        User::create($attr);
+
+        return back();
+    }
+
+    // public function getDriver()
+    // {
+
+    //      /**
+    //      * 
+    //      * TODO: fungsi untuk menampilkan data user berupa role supir
+    //      * 
+    //      */
     
 
-        $accountSupir = User::whereHas("roles", function($q){ $q->where("name", "supir"); })->get();
+    //     $accountSupir = User::whereHas("roles", function($q){ $q->where("name", "supir"); })->get();
 
-        return view('admin.account-manage.driver.index', compact('accountSupir'));
-    }
+    //     return view('admin.account-manage.driver.index', compact('accountSupir'));
+    // }
 }

@@ -21,7 +21,11 @@ Route::middleware(['auth', 'role:admin'])->group(function(){
     // Account Manager
     Route::prefix('account-manage')
             ->name('account.manage.')->group(function(){
-        Route::get('/manager', [AccountManageController::class, 'getManager'])->name('manager');
+        
+                Route::resource('/manager', AccountManageController::class);
+        // Route::get('/manager', [AccountManageController::class, 'getManager'])->name('manager');
+        // Route::get('/manager',[AccountManageController::class, 'create']->name(''));
+
         Route::get('/supir', [AccountManageController::class, 'getDriver'])->name('driver');
     });
 });
