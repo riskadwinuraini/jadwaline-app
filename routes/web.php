@@ -5,10 +5,13 @@ use App\Http\Controllers\Manager\{TransportController, ReviewController};
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
-
+use App\Models\Review;
 
 Route::get('/', function () {
-    return view('welcome');
+    
+    $reviews = Review::all();
+    // dd($reviews);
+    return view('welcome', compact('reviews'));
 });
 
 
