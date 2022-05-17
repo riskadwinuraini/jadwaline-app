@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Role;
+
 
 class AccountManageController extends Controller
 {
@@ -34,10 +36,19 @@ class AccountManageController extends Controller
         $attr = $request->all();
         $attr['password'] = Hash::make($request->input('password'));
 
-        User::create($attr);
+       $user =  User::create($attr);
+
+       $user->assignRole('manager');
 
         return back();
     }
+    public function hapusmanager($id)
+{
+     User::where('id', $id)
+              ->delete();
+
+              return back();
+}
 
     // public function getDriver()
     // {
