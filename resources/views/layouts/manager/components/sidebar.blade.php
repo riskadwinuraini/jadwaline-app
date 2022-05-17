@@ -13,6 +13,14 @@
           <span class="menu-title">Data master angkutan</span>
         </a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('manager.schedules.index')}}">
+          <i class="icon-paper menu-icon"></i>
+          <span class="menu-title">Jadwal</span>
+        </a>
+      </li>
+
       {{-- <li class="nav-item {{ request()->routeIs('manager.reviews.index') ? 'active ' : '' }}">
         <a class="nav-link" href="{{ route('manager.reviews.index')}}">
           <i class="icon-paper menu-icon"></i>
@@ -24,7 +32,6 @@
           <i class="icon-paper menu-icon"></i>
           <span class="menu-title">Profile</span>
         </a>
-      </li>
       </li>
     </ul>
   </nav>

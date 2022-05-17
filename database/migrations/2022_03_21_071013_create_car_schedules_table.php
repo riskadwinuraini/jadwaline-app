@@ -14,12 +14,20 @@ return new class extends Migration
     public function up()
     {
         Schema::create('car_schedules', function (Blueprint $table) {
-            $table->increments('car_id');            
+            $table->increments('id');
+            
+            $table->integer('transport_id')->unsigned()->index();
             $table->time('start_time');            
             $table->time('end_time');
             $table->string('day');
-            $table->string('code');
+            // $table->string('code');
             $table->timestamps();
+
+
+            $table->foreign('transport_id')
+                    ->references('id')
+                    ->on('transports')
+                    ->onDelete('cascade');
         });
     }
 

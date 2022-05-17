@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
+use App\Models\CarSchedule;
 use Illuminate\Http\Request;
-use App\Models\{Transport, User};
 
-class TransportController extends Controller
+class ScheduleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class TransportController extends Controller
      */
     public function index()
     {
-        $transports = Transport::all();
-        
-        return view('manager.transport.index', compact('transports'));
+        $schedules = CarSchedule::all();
+        // dd($schedules);
+        return view('manager.schedule.index', compact('schedules'));
     }
 
     /**
@@ -27,9 +27,7 @@ class TransportController extends Controller
      */
     public function create()
     {
-        $users = User::whereHas("roles", function($q){ $q->where("name", "supir"); })->get();
-
-        return view('manager.transport.create', compact('users'));
+        //
     }
 
     /**
@@ -40,10 +38,7 @@ class TransportController extends Controller
      */
     public function store(Request $request)
     {
-        $attr = $request->all();
-        
-        Transport::create($attr);
-        return back();
+        //
     }
 
     /**
@@ -65,8 +60,7 @@ class TransportController extends Controller
      */
     public function edit($id)
     {
-        $transportsedit=Transport::find($id);
-        return view('manager.transport.edit', compact('transportsedit'));
+        //
     }
 
     /**
@@ -76,13 +70,9 @@ class TransportController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Transport $transport)
+    public function update(Request $request, $id)
     {
-        $attr = $request->all();
-        $transport->update($attr);
-
-        return back();
-        
+        //
     }
 
     /**
@@ -93,10 +83,6 @@ class TransportController extends Controller
      */
     public function destroy($id)
     {
-        $transportsdelete=Transport::find($id);
-        $transportsdelete->delete();
-        
-
-        return back();
+        //
     }
 }

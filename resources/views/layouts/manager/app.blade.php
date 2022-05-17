@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="/manager/css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="/manager/images/favicon.png" />
+
+  @stack('style')
 </head>
 <body>
   <div class="container-scroller">
@@ -116,6 +118,8 @@
   <script src="/manager/js/dashboard.js"></script>
   <script src="/manager/js/Chart.roundedBarCharts.js"></script>
   <!-- End custom js for this page-->
+
+  @stack('script')
 </body>
 
 </html>

@@ -17,10 +17,10 @@ class CarScheduleSeeder extends Seeder
     public function run()
     {
         DB::table('car_schedules')->insert([
-        'start_time' => Carbon::now(),
-        'end_time' => Carbon::now(),
-        'day' => 'senin',
-        'code' => 'A24'
+            'start_time' => Carbon::now(),
+            'end_time' => Carbon::now(),
+            'day' => 'senin',
+            'code' => 'A24'
         ]);
     }
 }

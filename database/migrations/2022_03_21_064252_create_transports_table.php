@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('car_color');
             $table->string('number_plate');
 
-            $table->integer('car_code_id')->unsigned()->index();
-            $table->foreign('car_code_id')->references('car_id')->on('car_schedules')->onDelete('cascade');
+            // $table->integer('car_code_id')->unsigned()->index();
+            // $table->foreign('car_code_id')->references('car_id')->on('car_schedules')->onDelete('cascade');
 
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->ondelete('cascade')->onUpdate('cascade');

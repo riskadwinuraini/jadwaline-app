@@ -12,4 +12,9 @@ class CarSchedule extends Model
     protected $guarded = [];
 
     protected $table = 'car_schedules';
+
+    public function transport()
+    {
+        return $this->belongsTo(Transport::class);
+    }
 }
