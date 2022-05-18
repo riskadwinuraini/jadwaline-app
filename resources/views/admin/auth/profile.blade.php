@@ -1,11 +1,14 @@
 @extends('layouts.admin.app')
 
+ 
+@section('title', 'Edit Profile')
+
 @section('content')
     <div class="row">
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h4 class="card-title">Edit Profile</h4>
+                {{-- <h4 class="card-title">Edit Profile</h4> --}}
             </div>
             
 

@@ -1,5 +1,7 @@
 @extends('layouts.admin.app')
 
+@section('title', 'Dashboard')
+
 @section('content')
 <div class="row mb-2">
     <div class="col-12 col-md-3">

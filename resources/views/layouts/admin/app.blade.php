@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Admin Dashboard</title>
+    <title>@yield('title') - Admin Dashboard</title>
 
     <link rel="stylesheet" href="/admin/css/bootstrap.css">
 
@@ -23,8 +23,8 @@
 
             <div class="main-content container-fluid">
                 <div class="page-title">
-                    <h3>Dashboard</h3>
-                    <p class="text-subtitle text-muted">A good dashboard to display your statistics</p>
+                    {{-- <h3>Dashboard</h3> --}}
+                    <p class="text-subtitle text-muted"></p>
                 </div>
                 <section class="section">
                     @yield('content')

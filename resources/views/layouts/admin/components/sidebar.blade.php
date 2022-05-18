@@ -35,6 +35,14 @@
                         </li> -->
                     </ul>
                 </li>
+                
+                <li class="sidebar-item active ">
+                    <a href="{{ route('admin.review.index')}}" class='sidebar-link'>
+                        <i data-feather="home" width="20"></i>
+                        <span>Review</span>
+                    </a>
+                </li>
+
                 {{-- <li class="sidebar-item ">
                     <a href="index.html" class='sidebar-link'>
                         <i data-feather="bar-chart" width="20"></i>
