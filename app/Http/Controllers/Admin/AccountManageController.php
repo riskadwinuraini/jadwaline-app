@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AccountManageRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -30,7 +31,7 @@ class AccountManageController extends Controller
         return view('admin.account-manage.manager.create');
     }
 
-    public function store(Request $request)
+    public function store(AccountManageRequest $request)
     {
 
         $attr = $request->all();
@@ -41,9 +42,10 @@ class AccountManageController extends Controller
        $user->assignRole('manager');
 
         return back();
+
     }
     public function hapusmanager($id)
-{
+    {
      User::where('id', $id)
               ->delete();
 

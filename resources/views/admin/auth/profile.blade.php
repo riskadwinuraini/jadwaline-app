@@ -20,11 +20,21 @@
                             @csrf
                             @method('PUT')
                             <label for="basicInput">Name</label>
-                            <input type="text" class="form-control" id="basicInput" name="name" placeholder="name" value="{{ Auth::user()->name}}">
+                            <input type="text" class="form-control  @error('name') is-invalid @enderror" id="basicInput" name="name" placeholder="name" value="{{ Auth::user()->name}}">
+                            @error('name')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="helperText">E-mail</label>
-                            <input type="text" id="helperText" value="{{ Auth::user()->email}}" class="form-control" name="email" placeholder="email">
+                            <input type="text" id="helperText @error('email') is-invalid @enderror" id="basicInput"  value="{{ Auth::user()->email}}" class="form-control" name="email" placeholder="email">
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                             <p><small class="text-muted"></small></p>
                         </div>
                     </div>
