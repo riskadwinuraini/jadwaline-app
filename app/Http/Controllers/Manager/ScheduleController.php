@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
 use App\Models\CarSchedule;
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Http\Request;
 
 class ScheduleController extends Controller
@@ -83,6 +84,9 @@ class ScheduleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $scheduleId=CarSchedule::find($id);
+        $scheduleId->delete();        
+
+        return back();
     }
 }

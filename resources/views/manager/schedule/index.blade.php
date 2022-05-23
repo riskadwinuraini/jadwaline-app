@@ -41,8 +41,10 @@
                                 <td>{{ $schedule->end_time}}</td>
                                 <td>{{ $schedule->day}}</td>
                                 <td>
-                                    <a href="{{ route('manager.transport.edit', $schedule->id)}}" class="btn btn-info btn-sm">Edit</a>
-                                    <a href="{{ route('manager.transport.destroy', $schedule->id)}}" class="btn btn-danger btn-sm">Hapus</a>
+                                    <a href="{{ route('manager.schedules.edit', $schedule->id)}}" class="btn btn-info btn-sm">Edit</a>
+                                    <a class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')" href="/manager-area/schedules/destroy/{{$schedule->id}}">
+                                      Hapus
+                                    </a>
                                 </td>
                             </tr>
                         @endforeach

@@ -12,28 +12,42 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
+
                         <form action="{{ route('manager.transport.store') }}" autocomplete="off" method="POST">
                             @csrf
                             <div class="mb-3">
                                 <label for="" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="" name="name" placeholder="Example input placeholder">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="" name="name" placeholder="Example input placeholder">
+                                @error('name')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Warna Angkot</label>
-                                <input type="text" name="car_color" class="form-control"  placeholder="Example input placeholder">
+                                <input type="text" name="car_color" class="form-control"  @error('car_color')is-invalid @enderror" placeholder="Example input placeholder">
+                                @error('name')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Plat Nomor</label>
-                                <input type="text" name="number_plate" class="form-control"  placeholder="Example input placeholder">
+                                <input type="text" name="number_plate" class="form-control"  @error('name') is-invalid @enderror" placeholder="Example input placeholder">
+                                @error('name')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">Penanggung jawab</label>
-                                <select id="select-beast" class="" name="user_id"  autocomplete="off"> 
-                                    <option value="">Select a Page...</option>
+                                <select id="select-beast" class="@error('user_id') is-invalid @enderror" name="user_id"  autocomplete="off"> 
+                                    <option value="">Select a Page...</option> 
+
                                     @foreach ($users as $user)
                                         <option value="{{$user->id}}">{{ $user->name}}</option>
                                     @endforeach
                                 </select>
+                                @error('name')
+                                <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
 
                             <button class="btn btn-primary">create</button>  

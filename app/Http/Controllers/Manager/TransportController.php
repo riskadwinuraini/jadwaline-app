@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TransportRequest;
 use Illuminate\Http\Request;
 use App\Models\{Transport, User};
 
@@ -38,7 +39,7 @@ class TransportController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TransportRequest $request)
     {
         $attr = $request->all();
         
@@ -76,7 +77,7 @@ class TransportController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Transport $transport)
+    public function update(TransportRequest $request, Transport $transport)
     {
         $attr = $request->all();
         $transport->update($attr);

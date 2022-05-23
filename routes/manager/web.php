@@ -9,10 +9,13 @@ use App\Http\Controllers\Manager\DashboardController;
 
 Route::middleware(['auth','role:manager'])->group(function(){
     Route::get('/',DashboardController::class)->name('dashboard');
-    Route::resource('/transport', TransportController::class);
+    Route::resource('/transport', TransportController::class)->except('destroy');
+    Route::get('/transport/destroy/{id}', [TransportController::class, 'destroy']);
+
     Route::get('/review', [ReviewController::class, 'index'])->name('review.index');
 
-    Route::resource('/schedules', ScheduleController::class);
+    Route::resource('/schedules', ScheduleController::class)->except('destroy');
+    Route::get('/schedules/destroy/{id}', [ScheduleController::class, 'destroy']);
 
     // Route::get('/history', [HistoryController::class, 'index'])->name('history.index')
     Route::delete('/review/{review:id}', [ReviewController::class, 'destroy'])->name('review.destroy');

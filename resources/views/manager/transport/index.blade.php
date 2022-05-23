@@ -38,11 +38,19 @@
                                 <td>{{ $item->name}}</td>
                                 <td>{{ $item->car_color}}</td>
                                 <td>{{ $item->number_plate}}</td>
-                                {{-- <td>{{ $item->}}</td> --}}
                                 <td>{{ $item->user->name}}</td>
-                                <td>
-                                    <a href="{{ route('manager.transport.edit', $item->id)}}">Edit</a>
-                                    <a href="{{ route('manager.transport.destroy', $item->id)}}">Hapus</a>
+                                <td class="justify-content-between">
+                                    <a href="{{ route('manager.transport.edit', $item->id)}}" class="btn btn-primary">Edit</a>
+                                    <a class="btn btn-danger" onclick="return confirm('Are you sure?')" href="/manager-area/transport/destroy/{{$item->id}}">
+                                      {{-- <i class="fa fa-trash"></i> --}}
+                                      Hapus
+                                    </a>
+                                    {{-- <form method="POST" action="{{ route('manager.transport.destroy', $item->id) }}">
+                                      @csrf
+                                      @method('DELETE')
+                                      <button type="submit" class="btn btn-danger">Hapus</button>
+                                  </form> --}}
+                                    {{-- <a href="{{ route('manager.transport.destroy', $item->id)}}"></a> --}}
                                 </td>
                             </tr>
                         @endforeach
