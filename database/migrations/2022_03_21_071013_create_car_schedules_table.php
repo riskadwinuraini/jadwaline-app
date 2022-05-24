@@ -17,6 +17,8 @@ return new class extends Migration
             $table->increments('id');
             
             $table->integer('transport_id')->unsigned()->index();
+            $table->string('from');
+            $table->string('to');
             $table->time('start_time');            
             $table->time('end_time');
             $table->string('day');

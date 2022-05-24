@@ -13,7 +13,7 @@
                 <div class="card">
                     <div class="card-body">
 
-                        <form action="{{ route('manager.transport.store') }}" autocomplete="off" method="POST">
+                    <form action="{{ route('manager.transport.store') }}" autocomplete="off" method="POST">
                             @csrf
                             <div class="mb-3">
                                 <label for="" class="form-label">Name</label>

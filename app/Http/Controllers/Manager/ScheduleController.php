@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ScheduleRequest;
 use App\Models\CarSchedule;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Http\Request;
@@ -28,7 +29,7 @@ class ScheduleController extends Controller
      */
     public function create()
     {
-        //
+        return view('manager.schedule.create');
     }
 
     /**
@@ -37,9 +38,12 @@ class ScheduleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ScheduleRequest $request)
     {
-        //
+        $attr = $request->all();
+        
+        CarSchedule::create($attr);
+        return back();
     }
 
     /**

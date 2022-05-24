@@ -6,7 +6,7 @@
             <div class="card">
               <div class="card-body">
                 <h4 class="card-title">
-                    {{-- <a href="{{ route('manager.transport.create')}}" class="btn btn-primary"> Tambah data</a> --}}
+                    <a href="{{ route('manager.schedules.create')}}" class="btn btn-primary"> Tambah data</a>
                 </h4>
                 <div class="table-responsive">
                   <table class="table table-striped">
@@ -17,6 +17,12 @@
                         </th>
                         <th>
                           Transport
+                        </th>
+                        <th>
+                          rute berangkat
+                        </th>
+                        <th>
+                          rute pulang
                         </th>
                         <th>
                             jam berangkat
@@ -36,6 +42,8 @@
                         @foreach ($schedules as $schedule)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
+                                <td>{{ $schedule->from}}</td>
+                                <td>{{ $schedule->to}}</td>
                                 <td>{{ $schedule->transport->name}}</td>
                                 <td>{{ $schedule->start_time}}</td>
                                 <td>{{ $schedule->end_time}}</td>
