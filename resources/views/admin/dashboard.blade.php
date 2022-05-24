@@ -11,7 +11,7 @@
                     <div class='px-3 py-3 d-flex justify-content-between'>
                         <h3 class='card-title'>Today's Bookings</h3>
                         <div class="card-right d-flex align-items-center">
-                            <p>$50 </p>
+                            <p> {{ $count }} </p>
                         </div>
                     </div>
                     <div class="chart-wrapper">
@@ -26,9 +26,9 @@
             <div class="card-body p-0">
                 <div class="d-flex flex-column">
                     <div class='px-3 py-3 d-flex justify-content-between'>
-                        <h3 class='card-title'>Total Bookings</h3>
+                        <h3 class='card-title'>Jumlah pengguna</h3>
                         <div class="card-right d-flex align-items-center">
-                            <p>$532,2 </p>
+                            <p> {{ $count }} </p>
                         </div>
                     </div>
                     <div class="chart-wrapper">
@@ -43,9 +43,9 @@
             <div class="card-body p-0">
                 <div class="d-flex flex-column">
                     <div class='px-3 py-3 d-flex justify-content-between'>
-                        <h3 class='card-title'>ORDERS</h3>
+                        <h3 class='card-title'>Total Pemesanan</h3>
                         <div class="card-right d-flex align-items-center">
-                            <p>1,544 </p>
+                            <p> {{ $count }} </p>
                         </div>
                     </div>
                     <div class="chart-wrapper">
@@ -60,7 +60,7 @@
             <div class="card-body p-0">
                 <div class="d-flex flex-column">
                     <div class='px-3 py-3 d-flex justify-content-between'>
-                        <h3 class='card-title'>Statistika Pendapatan</h3>
+                        <h3 class='card-title'>Total Pendapatan</h3>
                         <div class="card-right d-flex align-items-center">
                             <p>423 </p>
                         </div>
@@ -74,7 +74,7 @@
     </div>
 </div>
 <div class="row mb-4">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <div class="card">
             <div class="card-header">
                 <h3 class='card-heading p-1 pl-3'>Penumpang Perbulan</h3>
@@ -116,20 +116,28 @@
                     <table class='table mb-0' id="table1">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>City</th>
-                                <th>Status</th>
+                                <th>Kode Transaksi</th>
+                                <th>Metode Pembayaran</th>
+                                <th>total</th>
+                                <th>user</th>
                             </tr>
                         </thead>
-                       
+                       <tbody>
+                           @foreach ($transactions as $transaction)
+                               <tr>
+                                   <td> {{ $transaction->code_transaction }} </td>
+                                   <td> {{ $transaction->payment_method }} </td>
+                                   <td> {{ $transaction->total }} </td>
+                                   <td> {{ $transaction->user_id }} </td>
+                               </tr>
+                           @endforeach
+                       </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    {{-- <div class="col-md-4">
         <div class="card ">
             <div class="card-header">
                 <h4>Your Earnings</h4>
@@ -142,6 +150,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 @endsection

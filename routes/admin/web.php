@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware(['auth', 'role:admin'])->group(function(){
     Route::get('/',DashboardController::class)->name('dashboard');
     Route::get('/review', [ReviewController::class, 'index'])->name('review.index');
-   
+    
     
     Route::get('review/hapus/{id}', [ReviewController::class, 'reviewDelete'])->name('hapusreview');
     Route::get('/profile',[ProfileController::class,'index'])->name('profile.index');

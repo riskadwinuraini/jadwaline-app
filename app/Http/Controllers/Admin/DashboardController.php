@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\{Review, Transaction};
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class DashboardController extends Controller
 {
@@ -15,6 +17,8 @@ class DashboardController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('admin.dashboard');
+        $count = Review::count();
+        $transactions = Transaction::whereDate('created_at', Carbon::today())->get();
+        return view('admin.dashboard', compact('count', 'transactions'));
     }
 }

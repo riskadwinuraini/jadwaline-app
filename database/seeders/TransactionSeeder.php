@@ -17,16 +17,44 @@ class TransactionSeeder extends Seeder
     {
         $transactions = [
             [
-                'code_transaction'  =>'234569',
+                'code_transaction'  =>'234561',
                 'payment_method'    =>'OVO',
                 'total'             => 50000,
                 'user_id'           => 1,
+                'created_at'        => now(), 
+                'updated_at'        => now()
             ],
             [
-                'code_transaction'  =>'334567',
+                'code_transaction'  =>'234562',
                 'payment_method'    =>'DANA',
                 'total'             => 150000,
                 'user_id'           => 2,
+                'created_at'        => now(), 
+                'updated_at'        => now()
+            ],
+            [
+                'code_transaction'  =>'234563',
+                'payment_method'    =>'M-Banking',
+                'total'             => 250000,
+                'user_id'           => 1,
+                'created_at'        => now(),
+                'updated_at'        => now()
+            ],
+            [
+                'code_transaction'  =>'234564',
+                'payment_method'    =>'DANA',
+                'total'             => 100000,
+                'user_id'           => 3,
+                'created_at'        => now(), 
+                'updated_at'        => now()
+            ],
+            [
+                'code_transaction'  =>'234565',
+                'payment_method'    =>'SeaBank',
+                'total'             => 150000,
+                'user_id'           => 2,
+                'created_at'        => now(), 
+                'updated_at'        => now()
             ]
         ];
 
