@@ -31,7 +31,7 @@
                             Jam pulang
                         </th>
                         <th>
-                          Hari
+                            Hari
                         </th>
                         <th>
                             Action
@@ -42,9 +42,9 @@
                         @foreach ($schedules as $schedule)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
+                                <td>{{ $schedule->transport->name}}</td>
                                 <td>{{ $schedule->from}}</td>
                                 <td>{{ $schedule->to}}</td>
-                                <td>{{ $schedule->transport->name}}</td>
                                 <td>{{ $schedule->start_time}}</td>
                                 <td>{{ $schedule->end_time}}</td>
                                 <td>{{ $schedule->day}}</td>

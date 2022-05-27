@@ -7,7 +7,7 @@
     <meta name="keywords" content="Bootstrap, Landing page, Template, Registration, Landing">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="author" content="Grayrids">
-    <title>landing page tracking app</title>
+    <title>JadwaLine</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/landing/css/bootstrap.min.css">
@@ -42,7 +42,7 @@
                 <a class="nav-link page-scroll" href="#app-features">Features</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link page-scroll" href="#testimonial">Testimonial</a>
+                <a class="nav-link page-scroll" href="#testimonial">Apa kata mereka ?</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link page-scroll" href="#download">Download</a>
@@ -58,7 +58,7 @@
         <div class="row space-100">
           <div class="col-lg-7 col-md-12 col-xs-12">
             <div class="contents">
-              <h2 class="head-title">LineTrack membantu anda Mempermudah tujuan Perjalanan anda.</h2>
+              <h2 class="head-title">JadwaLine membantu anda Mempermudah tujuan Perjalanan anda.</h2>
               <p>Ada beberapa jenis perjalanan membantumu lebih bijak dalam menghadapi persoalan hidup. Sebab, disetiap perjalanan selalu menyimpan kisah,cerita atau kenangan yang berkesan untuk dijadikan pelajaran.
                 karena itulah, TrackingLine bisa dijadikan solusi perjalanan kehidupan.
               </p>
@@ -69,7 +69,7 @@
           </div>
           <div class="col-lg-5 col-md-12 col-xs-12">
             <div class="intro-img">
-              <img src="img/intro-mobile.png" alt="">
+              <img src="/landing/img/hero-images.png" alt="">
             </div>
           </div>
         </div>
@@ -93,7 +93,7 @@
                 </span>
                 <div class="text">
                   <h4>User Friendly</h4>
-                  <p>TrackingLine memiliki tampilan yang nyaman dan user friendly baik di dekstop maupun mobile device sehingga mudah untuk digunakan</p>
+                  <p>JadwaLine memiliki tampilan yang nyaman dan user friendly baik di dekstop maupun mobile device sehingga mudah untuk digunakan</p>
                 </div>
               </div>
               <div class="box-item left">
@@ -102,14 +102,14 @@
                 </span>
                 <div class="text">
                   <h4>Professional</h4>
-                  <p>TrackingLine dikerjakan oleh orang-orang yang Professional demi memenuhi kebutuhan dan kepuasaan pelanggan.</p>
+                  <p>JadwaLine dikerjakan oleh orang-orang yang Professional demi memenuhi kebutuhan dan kepuasaan pelanggan.</p>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-4 col-md-12 col-xs-12">
             <div class="show-box">
-              <img src="img/features/app.png" alt="">
+              <img src="/landing/img/feature-images.png" alt="">
             </div>
           </div>
           <div class="col-lg-4 col-md-12 col-xs-12">
@@ -120,7 +120,7 @@
                 </span>
                 <div class="text">
                   <h4>Terpercaya</h4>
-                  <p>TrackingLine dilengkapi dengan berbagai macam validasi untuk mencegah pengguna melakukan kesalahan dalam proses penginputan data</p>
+                  <p>JadwaLine dilengkapi dengan berbagai macam validasi untuk mencegah pengguna melakukan kesalahan dalam proses penginputan data</p>
                 </div>
               </div>
               <div class="box-item right">
@@ -129,7 +129,7 @@
                 </span>
                 <div class="text">
                   <h4>Pelayanan Full 24 jam</h4>
-                  <p>TrackingLine memiliki kualitas yang terjamin karena dibuat dengan melalui proses yang maksimal sehingga meminimalisir terjadinya bug</p>
+                  <p>JadwaLine memiliki kualitas yang terjamin karena dibuat dengan melalui proses yang maksimal sehingga meminimalisir terjadinya bug</p>
                 </div>
               </div>
             </div>
@@ -142,8 +142,7 @@
     <section id="testimonial" class="section">
       <div class="container">
         <div class="section-header">
-          <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Testimonial</p>
-          <h2 class="section-title">Clients Who Loved Us</h2>
+          <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Apa kata mereka ?</p>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
@@ -199,19 +198,22 @@
     </div>
     <!-- Client Section End -->
     <!-- download Section Start -->
-    <section id="download">
+    <section id="download mb-4">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-xs-12">
             <div class="download-thumb wow fadeInLeft" data-wow-delay="0.2s">
-              <img class="img-fluid" src="img/mac.png" alt="">
+              <p>
+                Segera unduh dan nikmati perjalanan anda dengan JadwaLine
+              </p>
+              {{-- <img class="img-fluid" src="img/mac.png" alt=""> --}}
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-xs-12">
             <div class="download-wrapper wow fadeInRight" data-wow-delay="0.2s">
               <div>
                 <div class="download-text">
-                  <h4>Download Our App From Store</h4>
+                  <h4>Unduh sekarang</h4>
                   <p>Appropriately implement one-to-one catalysts for change vis-a-vis wireless catalysts for change. Enthusiastically architect adaptive.</p>
                 </div>
                 <a href="#" class="btn btn-common btn-effect"><i class="lni-android"></i> From PlayStore<br></a>
@@ -222,13 +224,14 @@
         </div>
       </div>
     </section>
-          </div>
+          
 
-          <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
+          {{-- <div class="col-lg-4 col-md-6 col-xs-12 blog-item">
+              
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
     <!-- blog Section End -->
 
     <!-- Map Section Start -->
@@ -236,7 +239,8 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12 padding-0">
-            <object style="border:0; height: 450px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34015.943594576835!2d-106.43242624069771!3d31.677719472407432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75d90e99d597b%3A0x6cd3eb9a9fcd23f1!2sCourtyard+by+Marriott+Ciudad+Juarez!5e0!3m2!1sen!2sbd!4v1533791187584"></object>
+            <iframe  style=" height: 450px; width: 100%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63226.41319216795!2d113.7904825468082!3d-7.931488987349039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6dcdcd94f074d%3A0xe056035859f6e572!2sBondowoso%2C%20Kec.%20Bondowoso%2C%20Kabupaten%20Bondowoso%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1653638738423!5m2!1sid!2sid" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            {{-- <object style="border:0; height: 450px; width: 100%;" data="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34015.943594576835!2d-106.43242624069771!3d31.677719472407432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86e75d90e99d597b%3A0x6cd3eb9a9fcd23f1!2sCourtyard+by+Marriott+Ciudad+Juarez!5e0!3m2!1sen!2sbd!4v1533791187584"></object> --}}
           </div>
         </div>
       </div>
@@ -253,9 +257,10 @@
                 <div class="contact-block wow fadeInUp" data-wow-delay="0.2s">
                   <div class="section-header">
                     <p class="btn btn-subtitle wow fadeInDown" data-wow-delay="0.2s">Contact</p>
-                    <h2 class="section-title">Love to Hear From You</h2>
+                    <h2 class="section-title">Kritik dan Saran</h2>
                   </div>
-                  <form id="contactForm">
+                  <form id="contactForm" method="POST" action="{{route('contact.store')}}">
+                    @csrf
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
@@ -265,19 +270,19 @@
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
-                          <input type="text" placeholder="Email" id="email" class="form-control" name="name" required data-error="Please enter your email">
+                          <input type="text" placeholder="Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                          <div class="help-block with-errors"></div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input type="text" placeholder="Subject" id="msg_subject" class="form-control" name="subject" required="" data-error="Please enter your subject">
                           <div class="help-block with-errors"></div>
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <input type="text" placeholder="Subject" id="msg_subject" class="form-control" required="" data-error="Please enter your subject">
-                          <div class="help-block with-errors"></div>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <textarea class="form-control" id="message" placeholder="Message" rows="7" data-error="Write your message" required></textarea>
+                          <textarea class="form-control" id="text" placeholder="Text" rows="7" data-error="Write your text" name="text" required></textarea>
                           <div class="help-block with-errors"></div>
                         </div>
                         <div class="submit-button">
