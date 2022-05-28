@@ -1,8 +1,7 @@
 <div id="sidebar" class='active'>
     <div class="sidebar-wrapper active">
         <div class="sidebar-header">
-            <img src="/admin/images/tl.jpg"
-            class="rounded-circle" width="200" height="450" alt="Circle image">
+            <img src="" alt="JadwaLine" width="500" height="333">
         </div>
         <div class="sidebar-menu">
             <ul class="menu">
