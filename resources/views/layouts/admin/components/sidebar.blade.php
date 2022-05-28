@@ -1,7 +1,7 @@
 <div id="sidebar" class='active'>
     <div class="sidebar-wrapper active">
         <div class="sidebar-header">
-            <img src="" alt="JadwaLine" width="500" height="333">
+            <img src="/admin/images/jadwaline.png" alt="JadwaLine" style="width: 100%; height: auto">
         </div>
         <div class="sidebar-menu">
             <ul class="menu">
