@@ -25,7 +25,7 @@ class TransportSeeder extends Seeder
                 'updated_at'    => now()
             ],
             [
-                'name'          =>'Lin A',
+                'name'          =>'Lin B',
                 'car_color'     =>'Kuning',
                 'number_plate'  => "PA234RT",
                 'user_id'       => 3,

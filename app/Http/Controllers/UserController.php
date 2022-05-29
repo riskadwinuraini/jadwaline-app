@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -23,18 +24,26 @@ class UserController extends Controller
 
     public function update(Request $request)
     {
-
-        $name = $request->file('image')->getClientOriginalName();
-        $path = $request->file('image')->store('public/images');
-
-
-        $attr = $request->all();
-        $attr['image'] = $path;
-
-        $request->user()->update(
-            $attr
-        );
-
-        return back();
+        if($request->hasFile('photo')){
+            $filename = $request->photo->getClientOriginalName();
+             $this->deleteOldImage(); 
+            $request->photo->storeAs('photos',$filename,'public');
+            Auth()->user()->update(
+                [
+                    'photo'=>$filename,
+                    'name' => request('name')
+                ]
+            );
+            return back()->with('message','Profile Picture Uploaded Successfully');
+        }
+        return redirect()->back();
+        
     }
+
+    protected function deleteOldImage()
+    {
+      if (auth()->user()->image){
+        Storage::delete('/public/photos/'.auth()->user()->image);
+      }
+     }
 }

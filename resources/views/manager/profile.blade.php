@@ -6,13 +6,18 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
+                        @if(session()->get('message'))
+                        <div class="alert alert-success" role="alert">
+                          <strong>Success: </strong>{{session()->get('message')}}
+                        </div>
+                        @endif
                         <div class="card-title">Edit Profile</div>
                         <form action="{{ route('manager.update.profile', Auth::user()->id)}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="mb-3">
-                                <input accept="image/*" name="image" type="file" id="imgInp"/>
-                                <img id="blah" src="{{asset(Auth::user()->image)}}"  alt="Your image" class="rounded-circle" width="123"/>
+                                <input accept="image/*"  name="photo" type="file" id="imgInp"/>
+                                <img id="blah" src="/manager/images/icon-user.png"  alt="Your image" class="rounded-circle" width="123"/>
                             </div>  
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Email address</label>

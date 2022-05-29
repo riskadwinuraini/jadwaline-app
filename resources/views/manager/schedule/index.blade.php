@@ -9,7 +9,7 @@
                     <a href="{{ route('manager.schedules.create')}}" class="btn btn-primary"> Tambah data</a>
                 </h4>
                 <div class="table-responsive">
-                  <table class="table table-striped">
+                  <table class="table table-striped" id="myTable">
                     <thead>
                       <tr>
                         <th>
@@ -64,3 +64,10 @@
           </div>
     </div>
 @endsection
+@push('script')
+    <script>
+      $(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+    </script>
+@endpush
