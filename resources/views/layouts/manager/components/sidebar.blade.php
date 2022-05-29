@@ -1,12 +1,13 @@
-<nav class="sidebar sidebar-offcanvas" id="sidebar">
+<nav class="sidebar sidebar-offcanvas mt-4" id="sidebar">
     <ul class="nav">
 
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('manager.dashboard')}}">
+        <a class="nav-link" href="/manager-area">
           <i class="icon-paper menu-icon"></i>
           <span class="menu-title">Dashboard</span>
         </a>
       </li>
+      
       <li class="nav-item">
         <a class="nav-link" href="{{ route('manager.transport.index')}}">
           <i class="icon-paper menu-icon"></i>
@@ -20,13 +21,6 @@
           <span class="menu-title">Jadwal</span>
         </a>
       </li>
-
-      {{-- <li class="nav-item {{ request()->routeIs('manager.reviews.index') ? 'active ' : '' }}">
-        <a class="nav-link" href="{{ route('manager.reviews.index')}}">
-          <i class="icon-paper menu-icon"></i>
-          <span class="menu-title">Reviews</span>
-        </a>
-      </li> --}}
       <li class="nav-item">
         <a class="nav-link" href="{{ route('manager.profile')}}">
           <i class="icon-paper menu-icon"></i>

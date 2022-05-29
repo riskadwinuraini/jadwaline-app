@@ -19,7 +19,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="/manager/css/vertical-layout-light/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="/manager/images/favicon-logo.png" />
+  <link rel="shortcut icon" href="/manager/images/logo-favicon.png" />
 
   @stack('style')
 </head>
@@ -58,8 +58,7 @@
             <div class="col-md-12 grid-margin">
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">Welcome Aamir</h3>
-                  <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6>
+                  <h3 class="font-weight-bold">Selamat Datang, {{Auth::user()->name}}</h3>
                 </div>
                 <div class="col-12 col-xl-4">
                  <div class="justify-content-end d-flex">
@@ -74,7 +73,7 @@
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright 2022. By: Kel.III 
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright 2022. By: Kel.VII
           </div>
         </footer>
         <!-- partial -->
