@@ -50,7 +50,7 @@
                                 @enderror
                             </div>
 
-                            <button class="btn btn-primary">create</button>  
+                            <button type="submit" class="btn btn-primary">create</button>  
                     </form>
                 </div>
             </div>

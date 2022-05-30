@@ -9,9 +9,10 @@ class CarSchedule extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
-
     protected $table = 'car_schedules';
+
+    protected $guarded = [];
+    // protected $fillable = ['transport_id', 'from', 'to', 'start_time', 'end_time', 'day'];
 
     public function transport()
     {

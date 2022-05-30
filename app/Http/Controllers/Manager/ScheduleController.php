@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Manager;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ScheduleRequest;
 use App\Models\CarSchedule;
+use App\Models\Transport;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Http\Request;
 
@@ -18,7 +19,7 @@ class ScheduleController extends Controller
     public function index()
     {
         $schedules = CarSchedule::all();
-        // dd($schedules);
+        
         return view('manager.schedule.index', compact('schedules'));
     }
 
@@ -29,7 +30,8 @@ class ScheduleController extends Controller
      */
     public function create()
     {
-        return view('manager.schedule.create');
+        $transports = Transport::all();
+        return view('manager.schedule.create', compact('transports'));
     }
 
     /**
@@ -40,10 +42,12 @@ class ScheduleController extends Controller
      */
     public function store(ScheduleRequest $request)
     {
+
         $attr = $request->all();
         
         CarSchedule::create($attr);
         return back();
+    
     }
 
     /**
@@ -65,7 +69,10 @@ class ScheduleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $scheduleId=CarSchedule::find($id);
+        $transports = Transport::all();
+
+        return view('manager.schedule.edit', compact('scheduleId', 'transports'));
     }
 
     /**
@@ -75,9 +82,17 @@ class ScheduleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ScheduleRequest $request, $id)
     {
-        //
+
+        $scheduleId = CarSchedule::find($id);
+        $attr = $request->all();
+        
+        $scheduleId->update($attr);
+
+        return redirect()
+                ->route('manager.schedules.index');
+
     }
 
     /**

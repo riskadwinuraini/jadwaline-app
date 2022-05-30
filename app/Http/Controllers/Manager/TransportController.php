@@ -67,7 +67,9 @@ class TransportController extends Controller
     public function edit($id)
     {
         $transportsedit=Transport::find($id);
-        return view('manager.transport.edit', compact('transportsedit'));
+        $users = User::whereHas("roles", function($q){ $q->where("name", "supir"); })->get();
+
+        return view('manager.transport.edit', compact('transportsedit', 'users'));
     }
 
     /**
@@ -79,10 +81,12 @@ class TransportController extends Controller
      */
     public function update(TransportRequest $request, Transport $transport)
     {
+
         $attr = $request->all();
         $transport->update($attr);
 
-        return back();
+        return redirect()
+                ->route('manager.transport.index');
         
     }
 

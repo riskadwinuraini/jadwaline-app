@@ -60,7 +60,7 @@
             <div class="contents">
               <h2 class="head-title">JadwaLine membantu anda Mempermudah tujuan Perjalanan anda.</h2>
               <p>Ada beberapa jenis perjalanan membantumu lebih bijak dalam menghadapi persoalan hidup. Sebab, disetiap perjalanan selalu menyimpan kisah,cerita atau kenangan yang berkesan untuk dijadikan pelajaran.
-                karena itulah, TrackingLine bisa dijadikan solusi perjalanan kehidupan.
+                karena itulah, JadwaLine bisa dijadikan solusi perjalanan kehidupan.
               </p>
               <div class="header-button">
                 <a href="{{ route('admin.login')}}" class="btn btn-border-filled">Sign in</a>
@@ -214,7 +214,8 @@
               <div>
                 <div class="download-text">
                   <h4>Unduh sekarang</h4>
-                  <p>Appropriately implement one-to-one catalysts for change vis-a-vis wireless catalysts for change. Enthusiastically architect adaptive.</p>
+                  <p>JadwaLine solusi cepat untuk anda bepergian!!!
+                    Yuk download dan gunakan sekarang !</p>
                 </div>
                 <a href="#" class="btn btn-common btn-effect"><i class="lni-android"></i> From PlayStore<br></a>
                 <a href="#" class="btn btn-apple"><i class="lni-apple"></i> From AppStore<br></a>

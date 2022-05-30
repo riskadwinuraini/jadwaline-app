@@ -24,11 +24,12 @@ class ScheduleRequest extends FormRequest
     public function rules()
     {
         return [
-        'transport_id' => 'required',
-        'from' => 'required',
-        'to' => 'required',
-        'start_time' => 'required',
-        'end_time' => 'required',
+            'transport_id'  => 'required',
+            'from'          => 'required',
+            'to'            => 'required',
+            'start_time'    => 'required',
+            'end_time'      => 'required',
+            'day'           => 'required'
         ];
     }
 }
