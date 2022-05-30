@@ -26,7 +26,7 @@
         <div class="card card-tale">
           <div class="card-body">
             <p class="mb-4">Data Angkutan</p>
-            <p class="fs-30 mb-2">5</p>
+            <p class="fs-30 mb-2">{{ $countDataAngkutan}}</p>
             <p>(total data angkutan)</p>
           </div>
         </div>
@@ -35,7 +35,7 @@
         <div class="card card-dark-blue">
           <div class="card-body">
             <p class="mb-4">Jadwal Angkutan</p>
-            <p class="fs-30 mb-2">7</p>
+            <p class="fs-30 mb-2">{{ $countScheduleAngkutan}}</p>
             <p>(7 hari)</p>
           </div>
         </div>
@@ -55,8 +55,8 @@
         <div class="card card-light-danger">
           <div class="card-body">
             <p class="mb-4">Profile</p>
-            <p class="fs-30 mb-2">3</p>
-            <p>3 akun aktif</p>
+            <p class="fs-30 mb-2">{{ $countUserAngkutan}}</p>
+            <p>akun aktif</p>
           </div>
         </div>
       </div>

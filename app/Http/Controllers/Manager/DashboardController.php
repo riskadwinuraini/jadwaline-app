@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Manager;
 
 use App\Http\Controllers\Controller;
+use App\Models\{Transport, CarSchedule, User};
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -15,6 +16,9 @@ class DashboardController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return view('manager.dashboard');
+        $countDataAngkutan = Transport::count();
+        $countScheduleAngkutan = CarSchedule::count();
+        $countUserAngkutan = User::count();
+        return view('manager.dashboard', compact('countDataAngkutan', 'countScheduleAngkutan', 'countUserAngkutan'));
     }
 }
