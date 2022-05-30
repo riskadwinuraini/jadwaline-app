@@ -1,7 +1,7 @@
 <div id="sidebar" class='active'>
     <div class="sidebar-wrapper active">
         <div class="sidebar-header">
-            <img src="/admin/images/jadwaline.png" alt="JadwaLine" style="width: 100%; height: auto">
+            <h2 style="color:DodgerBlue;">JadwaLine</h2>
         </div>
         <div class="sidebar-menu">
             <ul class="menu">
@@ -48,10 +48,6 @@
                         <span>Statistika Pendapatan</span>
                     </a>
                 </li> --}}
-              
-
-
-                
 
             </ul>
         </div>

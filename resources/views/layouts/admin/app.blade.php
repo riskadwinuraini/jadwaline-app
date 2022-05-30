@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/admin/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="/admin/css/app.css">
     <link rel="shortcut icon" href="/admin/images/favicon.svg" type="image/x-icon">
+    @stack('style')
 </head>
 
 <body>
@@ -43,6 +44,8 @@
     <script src="/admin/js/pages/dashboard.js"></script>
 
     <script src="/admin/js/main.js"></script>
+    
+    @stack('scripts')
 </body>
 
 </html>
