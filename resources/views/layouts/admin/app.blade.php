@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title') - Admin Dashboard</title>
 
-    <link rel="stylesheet" href="/admin/css/bootstrap.css">
+    <link rel="stylesheet" href="{{-asset('admin/css/bootstrap.css')}}">
 
-    <link rel="stylesheet" href="/admin/vendors/chartjs/Chart.min.css">
+    <link rel="stylesheet" href="{{-asset('admin/vendors/chartjs/Chart.min.css')}}">
 
-    <link rel="stylesheet" href="/admin/vendors/perfect-scrollbar/perfect-scrollbar.css">
-    <link rel="stylesheet" href="/admin/css/app.css">
-    <link rel="shortcut icon" href="/admin/images/Logo_J.png" type="image/x-icon">
+    <link rel="stylesheet" href="{{-asset('admin/vendors/perfect-scrollbar/perfect-scrollbar.css')}}">
+    <link rel="stylesheet" href="{{-asset('admin/css/app.css')}}">
+    <link rel="shortcut icon" href="{{-asset('admin/images/Logo_J.png type=image/x-icon')}}">
     @stack('style')
 </head>
 
