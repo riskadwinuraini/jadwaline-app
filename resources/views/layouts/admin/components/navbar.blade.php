@@ -18,7 +18,8 @@
                 <div class="dropdown-menu dropdown-menu-end">
                     {{-- <a class="dropdown-item" href="#"><i data-feather="user"></i> Account</a>
                     <a class="dropdown-item active" href="#"><i data-feather="mail"></i> Messages</a> --}}
-                    <a class="dropdown-item" href="{{route('admin.profile.index')}}"><i data-feather="settings"></i> Settings</a>
+                    <a class="dropdown-item" href="{{route('admin.profile.index')}}"><i data-feather="user"></i> Profile</a>
+                    <a class="dropdown-item" href="/admin-area/change-password"><i data-feather="key"></i> Ubah Passowrd</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('admin.logout')}}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"><i data-feather="log-out"></i> Logout</a>
                 </div>

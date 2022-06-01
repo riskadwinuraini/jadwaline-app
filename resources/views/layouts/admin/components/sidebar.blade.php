@@ -1,7 +1,8 @@
 <div id="sidebar" class='active'>
     <div class="sidebar-wrapper active">
         <div class="sidebar-header">
-            <h2 style="color:DodgerBlue;">JadwaLine</h2>
+            {{-- <h2 style="color:DodgerBlue;">JadwaLine</h2> --}}
+            <img src="/admin/images/JadwaLine.png" alt="">
         </div>
         <div class="sidebar-menu">
             <ul class="menu">
@@ -35,7 +36,7 @@
                     </ul>
                 </li>
                 
-                <li class="sidebar-item active ">
+                <li class="sidebar-item ">
                     <a href="{{ route('admin.review.index')}}" class='sidebar-link'>
                         <i data-feather="home" width="20"></i>
                         <span>Review</span>

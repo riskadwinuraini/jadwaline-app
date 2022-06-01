@@ -4,6 +4,7 @@
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\AccountManageController;
 use App\Http\Controllers\Admin\Auth\ProfileController;
+use App\Http\Controllers\Admin\ChangePasswordController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\Admin\DashboardController;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,9 @@ Route::middleware(['auth', 'role:admin'])->group(function(){
     Route::get('review/hapus/{id}', [ReviewController::class, 'reviewDelete'])->name('hapusreview');
     Route::get('/profile',[ProfileController::class,'index'])->name('profile.index');
     Route::put('update-Profile/{id}',[ProfileController::class,'update'])->name('update.profile');
+
+    Route::get('change-password', [ChangePasswordController::class, 'index']);
+    Route::post('change-password', [ChangePasswordController::class, 'store'])->name('change.password');
 
     // Account Manager
     Route::prefix('account-manage')

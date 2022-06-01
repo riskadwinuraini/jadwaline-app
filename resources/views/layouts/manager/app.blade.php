@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>jadwaLine</title>
+  <title>JadwaLine</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="/manager/vendors/feather/feather.css">
   <link rel="stylesheet" href="/manager/vendors/ti-icons/css/themify-icons.css">
@@ -19,7 +19,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="/manager/css/vertical-layout-light/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="/manager/images/logo-favicon.png" />
+  <link rel="shortcut icon" href="/manager/images/logo-Logo_J.png" />
 
   @stack('style')
 </head>

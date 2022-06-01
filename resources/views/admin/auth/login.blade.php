@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="text-center mb-5">
-    <img src="/admin/images/favicon.svg" height="48" class='mb-4'>
+    <img src="/admin/images/Logo_J.png" height="48" class='mb-4'>
     <h3>Sign In</h3>
-    <p>Please sign in to continue to Voler.</p>
+    <p>Please login to access the JadwaLine.</p>
 </div>
 <form action="{{ route('admin.login')}}" autocomplete="off" method="POST">
     @csrf
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="clearfix">
-        <button class="btn btn-primary float-end">Masuk</button>
+        <button class="btn btn-primary float-end">Login</button>
     </div>
 </form>
 @endsection

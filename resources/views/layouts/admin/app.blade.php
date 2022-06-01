@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="/admin/vendors/perfect-scrollbar/perfect-scrollbar.css">
     <link rel="stylesheet" href="/admin/css/app.css">
-    <link rel="shortcut icon" href="/admin/images/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="/admin/images/Logo_J.png" type="image/x-icon">
     @stack('style')
 </head>
 

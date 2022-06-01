@@ -14,7 +14,7 @@
             <div class="card-body p-0">
                 <div class="d-flex flex-column">
                     <div class='px-3 py-3 d-flex justify-content-between'>
-                        <h3 class='card-title'>Today's Bookings</h3>
+                        <h3 class='card-title'>Today's Booking</h3>
                         <div class="card-right d-flex align-items-center">
                             <p> {{ $count }} </p>
                         </div>
@@ -65,7 +65,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h3 class='card-heading p-1 pl-3'>Jadwal transport</h3>
+                <h3 class='card-heading p-1 pl-3'>Jadwal Transport</h3>
                 <p class='text-xs'>
                     <span class="text-green">
                      Informasi waktu hari ini: <span class="fw-bold" id="date-time"></span></p>
