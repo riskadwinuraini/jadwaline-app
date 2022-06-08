@@ -13,7 +13,18 @@ class ScheduleController extends Controller
     {
         $data = CarSchedule::all();
         return response()->json([
-            ScheduleResource::collection($data), 'Schedule fetched.'
+            "status" => 200,
+            "message" => "Success Fetch All data",
+            "data" => $data
+        ]);
+    }
+
+    public function getByDashboard($id)
+    {
+        $findSchedule = CarSchedule::findOrFail($id);
+        return response()->json([
+            "status"    => 200,
+            "data"      => $findSchedule
         ]);
     }
 }
