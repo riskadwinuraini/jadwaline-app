@@ -126,6 +126,7 @@
 
                                                 $workTime = strtotime($activeStartTime) - strtotime($activeEndTime);
 
+                                                // echo $workTime;exit;
                                                 $breakWorkTime = "12:00:00";
                                                 $breakEndTime= "12:30:00";
 
@@ -142,18 +143,18 @@
                                                         $text = 'Aktif';
                                                         break;
                                                     
-                                                        case $breakTime:
+                                                    case $breakTime:
                                                         $bg = 'red';
                                                         $text = 'Istirahat';
                                                         break;
 
-                                                        case $backToWorkTime:
+                                                    case $backToWorkTime:
                                                         $bg = 'success';
                                                         $text = 'Bekerja kembali';
                                                         break;
                                                 }
 
-                                                // echo '<span class="badge bg-.'$bg'.">.'$text'.</span>';
+                                                echo "<span class='badge bg-success'>$text</span>";
 
                                                 @endphp
                                             </td>
