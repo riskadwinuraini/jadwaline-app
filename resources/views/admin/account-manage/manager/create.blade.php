@@ -1,5 +1,6 @@
 @extends('layouts.admin.app')
 
+@section('title','Tambah Data Manager')
 @section('content')
     <div class="row">
     <div class="col-md-12">

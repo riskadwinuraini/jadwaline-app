@@ -33,7 +33,7 @@
                                                         </span>
                                                     </td>
                                                     <td>
-                                                        <a href="/admin-area/account-manage/manager/hapus/{{$manager->id}}" onclick="return confirm('Apakah Anda Yakin Menghapus Data?');" class="btn btn-danger btn-sm">
+                                                        <a href="{{ route('admin.account.manage.hapusmanager', $manager->id)}}" onclick="return confirm('Apakah Anda Yakin Menghapus Data?');" class="btn btn-danger btn-sm">
                                                         <i data-feather="trash-2" width="20"></i></a>
                                                     </td>
                                                 </tr>
