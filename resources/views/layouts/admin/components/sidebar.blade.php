@@ -2,7 +2,7 @@
     <div class="sidebar-wrapper active">
         <div class="sidebar-header">
             {{-- <h2 style="color:DodgerBlue;">JadwaLine</h2> --}}
-            <img src="/admin/images/JadwaLine.png" alt="">
+            <img src="{{ asset ('admin/images/JadwaLine.png')}}" alt="">
         </div>
         <div class="sidebar-menu">
             <ul class="menu">
@@ -38,12 +38,12 @@
                 
                 <li class="sidebar-item ">
                     <a href="{{ route('admin.review.index')}}" class='sidebar-link'>
-                        <i data-feather="home" width="20"></i>
+                        <i data-feather="star" width="20"></i>
                         <span>Review</span>
                     </a>
-                </li>
+                </li> 
 
-                {{-- <li class="sidebar-item ">
+                 {{-- <li class="sidebar-item ">
                     <a href="index.html" class='sidebar-link'>
                         <i data-feather="bar-chart" width="20"></i>
                         <span>Statistika Pendapatan</span>

@@ -7,7 +7,7 @@
             <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="header-title">Akun Review</h4>
+                            <h4 class="header-title">Tabel Review</h4>
                 
                             <div class="single-table">
                                 <div class="table-responsive">

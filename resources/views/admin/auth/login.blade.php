@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="text-center mb-5">
-    <img src="/admin/images/Logo_J.png" height="48" class='mb-4'>
+    <img src="{{ asset('admin/images/Logo_J.png')}}" height="48" class='mb-4'>
     <h3>Sign In</h3>
     <p>Please login to access the JadwaLine.</p>
 </div>
@@ -36,9 +36,6 @@
         <div class="checkbox float-start">
             <input type="checkbox" id="checkbox1" class='form-check-input' @checked(old('remember'))>
             <label for="checkbox1">Remember me</label>
-        </div>
-        <div class="float-end">
-            <a href="auth-register.html">Don't have an account?</a>
         </div>
     </div>
     <div class="clearfix">

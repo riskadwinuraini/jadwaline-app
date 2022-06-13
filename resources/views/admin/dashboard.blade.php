@@ -3,8 +3,8 @@
 @section('title', 'Dashboard')
 
 @push('style')
-    <link rel="stylesheet" href="/manager/vendors/datatables.net-bs4/dataTables.bootstrap4.css">`
-    <link rel="stylesheet" type="text/css" href="/manager/js/select.dataTables.min.css">
+    <link rel="stylesheet" href="{{ asset('/manager/vendors/datatables.net-bs4/dataTables.bootstrap4.css')}}">`
+    <link rel="stylesheet" type="{{ asset('text/css" href="/manager/js/select.dataTables.min.css')}}">
 @endpush
 
 @section('content')
@@ -103,63 +103,9 @@
                                         <th>Start Time</th>
                                         <th>End Time</th>
                                         <th>Day</th>
-                                        <th>Status</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    @foreach ($schedules as $schedule)
-                                        <tr>
-                                            <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $schedule->transport->name}}</td>
-                                            <td>{{ $schedule->from}}</td>
-                                            <td>{{ $schedule->to}}</td>
-                                            <td>{{ $schedule->start_time}}</td>
-                                            <td>{{ $schedule->end_time}}</td>
-                                            <td>{{ $schedule->day}}</td>
-                                           <td>
-                                               @php
-                                               
-                                                $today = date("H:i:s");
-
-                                                $activeStartTime = "07:00:00";
-                                                $activeEndTime="17:45:00";
-
-                                                $workTime = strtotime($activeStartTime) - strtotime($activeEndTime);
-
-                                                // echo $workTime;exit;
-                                                $breakWorkTime = "12:00:00";
-                                                $breakEndTime= "12:30:00";
-
-                                                $breakTime = strtotime($breakWorkTime) - strtotime($breakEndTime);
-
-                                                $backToWorkTime = strtotime("12:45:00") - strtotime("16:00:00"); 
-
-                                                $bg = '';
-                                                $text = '';
-
-                                                switch ($today) {
-                                                    case $workTime:
-                                                        $bg = 'yellow';
-                                                        $text = 'Aktif';
-                                                        break;
-                                                    
-                                                    case $breakTime:
-                                                        $bg = 'red';
-                                                        $text = 'Istirahat';
-                                                        break;
-
-                                                    case $backToWorkTime:
-                                                        $bg = 'success';
-                                                        $text = 'Bekerja kembali';
-                                                        break;
-                                                }
-
-                                                echo "<span class='badge bg-success'>$text</span>";
-
-                                                @endphp
-                                            </td>
-                                        </tr>
-                                    @endforeach
+                                   
                                 </tbody>
                         </table>
                     </div>
@@ -171,8 +117,8 @@
 </div>
 @endsection
 @push('scripts')
-<script src="/manager/vendors/datatables.net/jquery.dataTables.js"></script>
-<script src="/manager/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+<script src="{{ asset('manager/vendors/datatables.net/jquery.dataTables.js')}}"></script>
+<script src="{{ asset('manager/vendors/datatables.net-bs4/dataTables.bootstrap4.js')}}"></script>
 <script>
     // Function to format 1 in 01
     const zeroFill = n => {

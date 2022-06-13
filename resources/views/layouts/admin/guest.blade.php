@@ -8,7 +8,7 @@
     <title>Sign in - JadwaLine</title>
     <link rel="stylesheet" href="{{ asset('admin/css/bootstrap.css')}}">
     
-    <link rel="shortcut icon" href="{{ asset('admin/images/Logo_J.png" type="image/x-icon')}}">
+    <link rel="shortcut icon" href="{{ asset('admin/images/Logo_J.png')}}">
     <link rel="stylesheet" href="{{ asset('admin/css/app.css')}}">
 </head>
 
@@ -28,10 +28,10 @@
 </div>
 
     </div>
-    <script src="/admin/js/feather-icons/feather.min.js"></script>
-    <script src="/admin/js/app.js"></script>
+    <script src="{{ asset('admin/js/feather-icons/feather.min.js')}}"></script>
+    <script src="{{ asset('admin/js/app.js')}}"></script>
     
-    <script src="/admin/js/main.js"></script>
+    <script src="{{ asset('admin/js/main.js')}}"></script>
 </body>
 
 </html>

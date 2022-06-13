@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="{{ asset('admin/vendors/perfect-scrollbar/perfect-scrollbar.css')}}">
     <link rel="stylesheet" href="{{ asset('admin/css/app.css')}}">
-    <link rel="shortcut icon" href="{{ asset('admin/images/Logo_J.png type=image/x-icon')}}">
+    <link rel="shortcut icon" href="{{ asset('admin/images/Logo_J.png')}}">
     @stack('style')
 </head>
 
@@ -35,15 +35,15 @@
 @include('layouts.admin.components.footer')
         </div>
     </div>
-    <script src="/admin/js/feather-icons/feather.min.js"></script>
-    <script src="/admin/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-    <script src="/admin/js/app.js"></script>
+    <script src="{{ asset('admin/js/feather-icons/feather.min.js')}}"></script>
+    <script src="{{ asset('admin/vendors/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
+    <script src="{{ asset('admin/js/app.js')}}"></script>
 
-    <script src="/admin/vendors/chartjs/Chart.min.js"></script>
-    <script src="/admin/vendors/apexcharts/apexcharts.min.js"></script>
-    <script src="/admin/js/pages/dashboard.js"></script>
+    <script src="{{ asset('admin/vendors/chartjs/Chart.min.js')}}"></script>
+    <script src="{{ asset('admin/vendors/apexcharts/apexcharts.min.js')}}"></script>
+    <script src="{{ asset('admin/js/pages/dashboard.js')}}"></script>
 
-    <script src="/admin/js/main.js"></script>
+    <script src="{{ asset('admin/js/main.js')}}"></script>
     
     @stack('scripts')
 </body>
