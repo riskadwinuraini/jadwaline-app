@@ -41,7 +41,7 @@
                                 <td>{{ $item->user->name}}</td>
                                 <td class="justify-content-between">
                                     <a href="{{ route('manager.transport.edit', $item->id)}}" class="btn btn-primary">Edit</a>
-                                    <a class="btn btn-danger" onclick="return confirm('Are you sure?')" href="/manager-area/transport/destroy/{{$item->id}}">
+                                    <a class="btn btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus data ini?')" href="/manager-area/transport/destroy/{{$item->id}}">
                                       {{-- <i class="fa fa-trash"></i> --}}
                                       Hapus
                                     </a>

@@ -25,8 +25,8 @@ class TransportRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'car_color' => 'required',
+            'name' => 'required|integer',
+            'car_color' => 'required|integer',
             'number_plate' => 'required',
             'user_id' => 'required',
         ];

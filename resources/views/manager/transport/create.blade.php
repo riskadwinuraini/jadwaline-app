@@ -17,7 +17,7 @@
                             @csrf
                             <div class="mb-3">
                                 <label for="" class="form-label">Name</label>
-                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="" name="name" placeholder="Example input placeholder">
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" id="" name="name" placeholder="Example input placeholder" onkeyup="vietnameseNoNumbers(this)">
                                 @error('name')
                                     <small class="text-danger">{{ $message }}</small>
                                 @enderror
@@ -66,5 +66,12 @@
             direction: "asc"
         }
     });
+
+
+        function vietnameseNoNumbers(input) {
+        var regex = /[^-a-z !@&*():;"',./\u0080-\u024F\u0300-\u036F\u1E00-\u1Eff\u1DC4]/ig;
+        input.value = input.value.replace(regex, "");
+    }
+    
     </script>
 @endpush

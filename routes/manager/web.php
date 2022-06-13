@@ -15,7 +15,7 @@ Route::middleware(['auth','role:manager'])->group(function(){
     Route::get('/review', [ReviewController::class, 'index'])->name('review.index');
 
     Route::resource('/schedules', ScheduleController::class)->except('destroy');
-    Route::get('/schedules/destroy/{id}', [ScheduleController::class, 'destroy']);
+    Route::get('/schedules/destroy/{id}', [ScheduleController::class, 'destroy'])->name('schedules.destroy');
 
     // Route::get('/history', [HistoryController::class, 'index'])->name('history.index')
     Route::delete('/review/{review:id}', [ReviewController::class, 'destroy'])->name('review.destroy');

@@ -3,7 +3,7 @@
 
       <li class="nav-item">
         <a class="nav-link" href="/manager-area">
-          <i class="icon-paper menu-icon"></i>
+          <i class="icon-grid menu-icon"></i>
           <span class="menu-title">Dashboard</span>
         </a>
       </li>
@@ -17,13 +17,13 @@
 
       <li class="nav-item">
         <a class="nav-link" href="{{ route('manager.schedules.index')}}">
-          <i class="icon-paper menu-icon"></i>
+          <i class="icon-grid-2 menu-icon"></i>
           <span class="menu-title">Jadwal</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ route('manager.profile')}}">
-          <i class="icon-paper menu-icon"></i>
+          <i class="icon-head menu-icon"></i>
           <span class="menu-title">Profile</span>
         </a>
       </li>

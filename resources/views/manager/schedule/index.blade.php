@@ -50,7 +50,7 @@
                                 <td>{{ $schedule->day}}</td>
                                 <td>
                                     <a href="{{ route('manager.schedules.edit', $schedule->id)}}" class="btn btn-info btn-sm">Edit</a>
-                                    <a class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')" href="/manager-area/schedules/destroy/{{$schedule->id}}">
+                                    <a class="btn btn-danger btn-sm" onclick="return confirm('Apakah anda yakin ingin menghapus data?')" href="{{ route('manager.schedules.destroy', $schedule->id)}}">
                                       Hapus
                                     </a>
                                 </td>
